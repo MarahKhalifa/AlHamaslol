@@ -1,4 +1,14 @@
-﻿body {
+﻿@font-face {
+    font-family: Abraham;
+    src: url(styles/Abraham-Regular.ttf);
+}
+
+@font-face {
+    font-family: Alef;
+    src: url(styles/Alef-Regular.ttf);
+}
+
+body {
     /*background-color: #C1EDFF;*/
     /*background-color: white;*/
     background-color: #ffd7ba;
