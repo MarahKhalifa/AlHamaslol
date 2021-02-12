@@ -826,16 +826,16 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// possiteveMsg_ai
-	this.feedbackText = new cjs.Text(",דובכה לכ\n!התיחנ דועב יל תרזע", "17px 'Abraham'", "#231F20");
+	this.feedbackText = new cjs.Text(",דובכה לכ\n!התיחנ דועב יל תרזע", "17px 'Alef'", "#231F20");
 	this.feedbackText.name = "feedbackText";
 	this.feedbackText.textAlign = "right";
-	this.feedbackText.lineHeight = 24;
+	this.feedbackText.lineHeight = 27;
 	this.feedbackText.parent = this;
-	this.feedbackText.setTransform(130.4094,11.45,0.7983,1);
+	this.feedbackText.setTransform(130.4,11.45,0.7983,1);
 
 	this.shape = new cjs.Shape();
 	this.shape.graphics.f("#231F20").s().p("AraHzQgHgBgEgHQgEgIAHgFQAjgfAOgPQAbgcAPgaQAKgSABgLQACgIgDgIIgBgBQgGgKgNgGQgJgDgUgEIgwgJQgdgGgTgFQhBgTgvgkQgzgoglg/Qghg6gRhFQgPg/gBhKQgBg/AJgpQAMg5AjgtQAjgrA0gbQA2gbBWgUQBJgSBMgLQCQgUCqAEQDtAGGWAmQDUAUBnANQBWAKA0AOQBLAVAzAlQAyAkAcAvQAgA1ALBOQAMBWgEAwQgFBLgmAzQg6BNiJA2QhxAtinAWQhqANibADQiuAAhXACQhfADhOAIIg/AGQgjACgcgDQgcgCghgIQgcgFgKABQgZADgTAXQgMANgTAeQgXAigfASQgrAZg8AFQgRACgUAAQggAAgngEgAm2nbQicAFiPAgQhVAUgtASQhHAeglAwQgeAmgLA2QgJAqACA8QAFCYBDBsQAmA9A0AiQArAcBBAQIAsAIQAcAFAQAEQAoALAKAYIABADQAKAZgUAkQgPAdgdAeQgMAMgTASQA1AEAogGQAtgHAfgTQAcgRAYgkQATgdAMgMQATgVAZgGQASgEAZAEQAOACAcAHQAtAIBAgFIBtgLQBGgEBugCIEMgEQCZgFBygWQCggfBkg3QB/hFAThnQAFgegCgkQgBgXgFgsQgJhWgcgyQg3hliKgmQg9gQhUgLIiTgPQi0gSiBgLQidgNibgJQiYgIhkAAIg9ABg");
-	this.shape.setTransform(77.8593,50.2429,0.7422,1);
+	this.shape.setTransform(77.8577,50.2429,0.7421,1);
 
 	this.shape_1 = new cjs.Shape();
 	this.shape_1.graphics.f("#FFFFFF").s().p("AraHmQB8hrgUgyQgHgSgdgJQgKgDg4gLQhugUg/g4Qgjgfghg2QhChugBiiQgBhQAXg2QAdhIBKgpQAzgcBZgWQCIgjCYgJQB0gHC+AKQE5AQHFAwQBYAJAwAJQBJANAyAVQBmArAtBXQASAiAJAsQAGAdAFAyQAGA8gDAjQgFA1gaApQgkA8hYAvQhQAshsAbQhvAbh0AKQhPAHiEABIj7AEQhfADhPAIIg6AGQghACghgDQgOgCg0gKQgagFgTAGQgbAIgVAeIgmA2Qg2A5h2AAQgfAAgkgEg");
@@ -2016,7 +2016,7 @@ if (reversed == null) { reversed = false; }
 		
 		//add plane text
 		var planeText = new createjs.Text();
-		planeText.font = "16px Alef";
+		planeText.font = "16px Abraham";
 		planeText.color = "black";
 		Plane.addChild(planeText);
 		planeText.x = 357;
@@ -2029,7 +2029,6 @@ if (reversed == null) { reversed = false; }
 		stage.addChild(airplaneApproach);
 		airplaneApproach.x = 0;
 		airplaneApproach.y = 182;
-		airplaneApproach.z = 3;
 		airplaneApproach.gotoAndStop(0);
 		airplaneApproach.visible = false;
 		
@@ -2044,7 +2043,6 @@ if (reversed == null) { reversed = false; }
 		stage.addChild(inspectorFeedback);
 		inspectorFeedback.x = 178;
 		inspectorFeedback.y = 40;
-		// inspectorFeedback.z = 50;
 		inspectorFeedback.visible = false;
 		inspectorFeedback.feedbackText.lineWidth = 130;
 		
@@ -2071,7 +2069,6 @@ if (reversed == null) { reversed = false; }
 		stage.addChild(landing);
 		landing.x = 637.05;
 		landing.y = 236.75;
-		landing.z = 3;
 		landing.gotoAndStop(0);
 		landing.visible = false;
 		
@@ -2277,7 +2274,7 @@ if (reversed == null) { reversed = false; }
 		var database = [ 
 		{	// game 1 - גיאוגרפיה
 			name: "Geography",
-			instructionsText: "מיין את היבשות על פי היבשות אליהן משתייכות באמצעות לחיצה על השלט המתאים",
+			instructionsText: "מיין את המדינות על פי היבשות אליהן משתייכות באמצעות לחיצה על השלט המתאים",
 			categories: [
 				"אסיה",
 				"אירופה",
@@ -2320,17 +2317,17 @@ if (reversed == null) { reversed = false; }
 				{type: "text", 	content: "5+6", 	description: "11", 	answer: 1},
 				{type: "text", 	content: "7x7", 	description: "49", 	answer: 1},
 				{type: "text", 	content: "18", 	description: "18", 	answer: 0},
-				{type: "text", 	content: "בריבוע 3", 	description: "9", 	answer: 1},
+				{type: "text", 	content: "3 בריבוע", 	description: "9", 	answer: 1},
 				{type: "text", 	content: "0+8-5", 	description: "3", 	answer: 1},
 				{type: "text", 	content: "63", 	description: "63", 	answer: 1},
 				{type: "text", 	content: "3+3x3", 	description: "12", 	answer: 0},
 				{type: "text", 	content: "27", 	description: "27", 	answer: 1},
 				{type: "text", 	content: "מספר זה הינו השורש הריבוע של המספר 9", 	description: "3", 	answer: 1},
 				{type: "text", 	content: "88", 	description: "88", 	answer: 0},
-				{type: "text", 	content: "בריבוע 5", 	description: "25", 	answer: 1},
+				{type: "text", 	content: "5 בריבוע", 	description: "25", 	answer: 1},
 				{type: "text", 	content: "80/8", 	description: "10", 	answer: 0},
 				{type: "text", 	content: "7x5", 	description: "35", 	answer: 1},
-				{type: "text", 	content: "בריבוע 9", 	description: "81", 	answer: 1},
+				{type: "text", 	content: "9 בריבוע", 	description: "81", 	answer: 1},
 				{type: "text", 	content: "מספר זה הינו השורש הריבועי של המספר 64", 	description: "8", 	answer: 0},
 				{type: "text", 	content: "4x9", 	description: "36", 	answer: 0},
 				{type: "text", 	content: "112", 	description: "112", 	answer: 0},
@@ -2471,6 +2468,13 @@ if (reversed == null) { reversed = false; }
 				if (currentQues != null ) { 	// there is a non-answered question
 					if ( QuesItemArray[currentQues].type == 'text') {
 						planeText.text = QuesItemArray[currentQues].name;
+						if ( planeText.text.length < 20 ) {
+							planeText.font = "25px Alef";
+						} else if ( planeText.text.length < 36 ) {
+							planeText.font = "20px Alef";
+						} else {
+							planeText.font = "18px Alef";
+						}
 						planeText.y = 50 -  planeText.getMeasuredHeight()/2;
 					}
 					else {
@@ -2827,8 +2831,10 @@ if (reversed == null) { reversed = false; }
 						var redRect = new lib.redRect();
 						redRect.x = x;
 						redRect.y = y;
-						var rectNewScale = colWidth / 176.75;
-						redRect.scaleX = rectNewScale;
+						var rectNewScaleX = colWidth / 176.75;
+						redRect.scaleX = rectNewScaleX;
+						var rectNewScaleY = rowHeight / 65.6;
+						redRect.scaleY = rectNewScaleY;
 						scoreWindow.addChild(redRect);
 						scoreWinEl.push(redRect);
 					}
@@ -2990,10 +2996,10 @@ if (reversed == null) { reversed = false; }
 		// loads image on plane
 		function addBitmapToScore(bitmap, x, y, w, h) {
 			// adapt size and position
-			const IMG_X = x;
-			const IMG_Y = y;
-			const IMG_W = w;
-			const IMG_H = h;
+			const IMG_X = x + 1 ;
+			const IMG_Y = y + 1 ;
+			const IMG_W = w - 2 ;
+			const IMG_H = h - 2 ;
 			// postion image
 			bitmap.x = IMG_X;
 			bitmap.y = IMG_Y;
@@ -3037,23 +3043,23 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedBmp_531.png?1613132430385", id:"CachedBmp_531"},
-		{src:"images/game_atlas_1.png?1613132430314", id:"game_atlas_1"},
-		{src:"images/game_atlas_2.png?1613132430314", id:"game_atlas_2"},
-		{src:"images/game_atlas_3.png?1613132430314", id:"game_atlas_3"},
-		{src:"images/game_atlas_4.png?1613132430314", id:"game_atlas_4"},
-		{src:"images/game_atlas_5.png?1613132430314", id:"game_atlas_5"},
-		{src:"images/game_atlas_6.png?1613132430314", id:"game_atlas_6"},
-		{src:"images/game_atlas_7.png?1613132430314", id:"game_atlas_7"},
-		{src:"images/game_atlas_8.png?1613132430314", id:"game_atlas_8"},
-		{src:"images/game_atlas_9.png?1613132430314", id:"game_atlas_9"},
-		{src:"images/game_atlas_10.png?1613132430314", id:"game_atlas_10"},
-		{src:"images/game_atlas_11.png?1613132430315", id:"game_atlas_11"},
-		{src:"sounds/backgroundMusic.mp3?1613132430385", id:"backgroundMusic"},
-		{src:"sounds/gameOverSound.mp3?1613132430385", id:"gameOverSound"},
-		{src:"sounds/goodJobSound.mp3?1613132430385", id:"goodJobSound"},
-		{src:"sounds/ohNoSound.mp3?1613132430385", id:"ohNoSound"},
-		{src:"sounds/planeFlySound.mp3?1613132430385", id:"planeFlySound"}
+		{src:"images/CachedBmp_531.png?1613139468736", id:"CachedBmp_531"},
+		{src:"images/game_atlas_1.png?1613139468660", id:"game_atlas_1"},
+		{src:"images/game_atlas_2.png?1613139468660", id:"game_atlas_2"},
+		{src:"images/game_atlas_3.png?1613139468660", id:"game_atlas_3"},
+		{src:"images/game_atlas_4.png?1613139468660", id:"game_atlas_4"},
+		{src:"images/game_atlas_5.png?1613139468660", id:"game_atlas_5"},
+		{src:"images/game_atlas_6.png?1613139468660", id:"game_atlas_6"},
+		{src:"images/game_atlas_7.png?1613139468660", id:"game_atlas_7"},
+		{src:"images/game_atlas_8.png?1613139468661", id:"game_atlas_8"},
+		{src:"images/game_atlas_9.png?1613139468661", id:"game_atlas_9"},
+		{src:"images/game_atlas_10.png?1613139468661", id:"game_atlas_10"},
+		{src:"images/game_atlas_11.png?1613139468662", id:"game_atlas_11"},
+		{src:"sounds/backgroundMusic.mp3?1613139468736", id:"backgroundMusic"},
+		{src:"sounds/gameOverSound.mp3?1613139468736", id:"gameOverSound"},
+		{src:"sounds/goodJobSound.mp3?1613139468736", id:"goodJobSound"},
+		{src:"sounds/ohNoSound.mp3?1613139468736", id:"ohNoSound"},
+		{src:"sounds/planeFlySound.mp3?1613139468736", id:"planeFlySound"}
 	],
 	preloads: []
 };

@@ -38,7 +38,7 @@ Plane.y = 200;
 
 //add plane text
 var planeText = new createjs.Text();
-planeText.font = "16px Alef";
+planeText.font = "16px Abraham";
 planeText.color = "black";
 Plane.addChild(planeText);
 planeText.x = 357;
@@ -51,7 +51,6 @@ var airplaneApproach = new lib.airplaneApproach();
 stage.addChild(airplaneApproach);
 airplaneApproach.x = 0;
 airplaneApproach.y = 182;
-airplaneApproach.z = 3;
 airplaneApproach.gotoAndStop(0);
 airplaneApproach.visible = false;
 
@@ -66,7 +65,6 @@ var inspectorFeedback = new lib.feedbackBubble();
 stage.addChild(inspectorFeedback);
 inspectorFeedback.x = 178;
 inspectorFeedback.y = 40;
-// inspectorFeedback.z = 50;
 inspectorFeedback.visible = false;
 inspectorFeedback.feedbackText.lineWidth = 130;
 
@@ -93,7 +91,6 @@ var landing = new lib.landing();
 stage.addChild(landing);
 landing.x = 637.05;
 landing.y = 236.75;
-landing.z = 3;
 landing.gotoAndStop(0);
 landing.visible = false;
 
@@ -299,7 +296,7 @@ var planeInterval; // global variable for handling plane fly interval
 var database = [ 
 {	// game 1 - גיאוגרפיה
 	name: "Geography",
-	instructionsText: "מיין את היבשות על פי היבשות אליהן משתייכות באמצעות לחיצה על השלט המתאים",
+	instructionsText: "מיין את המדינות על פי היבשות אליהן משתייכות באמצעות לחיצה על השלט המתאים",
 	categories: [
 		"אסיה",
 		"אירופה",
@@ -342,17 +339,17 @@ var database = [
 		{type: "text", 	content: "5+6", 	description: "11", 	answer: 1},
 		{type: "text", 	content: "7x7", 	description: "49", 	answer: 1},
 		{type: "text", 	content: "18", 	description: "18", 	answer: 0},
-		{type: "text", 	content: "בריבוע 3", 	description: "9", 	answer: 1},
+		{type: "text", 	content: "3 בריבוע", 	description: "9", 	answer: 1},
 		{type: "text", 	content: "0+8-5", 	description: "3", 	answer: 1},
 		{type: "text", 	content: "63", 	description: "63", 	answer: 1},
 		{type: "text", 	content: "3+3x3", 	description: "12", 	answer: 0},
 		{type: "text", 	content: "27", 	description: "27", 	answer: 1},
 		{type: "text", 	content: "מספר זה הינו השורש הריבוע של המספר 9", 	description: "3", 	answer: 1},
 		{type: "text", 	content: "88", 	description: "88", 	answer: 0},
-		{type: "text", 	content: "בריבוע 5", 	description: "25", 	answer: 1},
+		{type: "text", 	content: "5 בריבוע", 	description: "25", 	answer: 1},
 		{type: "text", 	content: "80/8", 	description: "10", 	answer: 0},
 		{type: "text", 	content: "7x5", 	description: "35", 	answer: 1},
-		{type: "text", 	content: "בריבוע 9", 	description: "81", 	answer: 1},
+		{type: "text", 	content: "9 בריבוע", 	description: "81", 	answer: 1},
 		{type: "text", 	content: "מספר זה הינו השורש הריבועי של המספר 64", 	description: "8", 	answer: 0},
 		{type: "text", 	content: "4x9", 	description: "36", 	answer: 0},
 		{type: "text", 	content: "112", 	description: "112", 	answer: 0},
@@ -493,6 +490,13 @@ function startNewQuestion() {
 		if (currentQues != null ) { 	// there is a non-answered question
 			if ( QuesItemArray[currentQues].type == 'text') {
 				planeText.text = QuesItemArray[currentQues].name;
+				if ( planeText.text.length < 20 ) {
+					planeText.font = "25px Alef";
+				} else if ( planeText.text.length < 36 ) {
+					planeText.font = "20px Alef";
+				} else {
+					planeText.font = "18px Alef";
+				}
 				planeText.y = 50 -  planeText.getMeasuredHeight()/2;
 			}
 			else {
@@ -849,8 +853,10 @@ function showScore() {
 				var redRect = new lib.redRect();
 				redRect.x = x;
 				redRect.y = y;
-				var rectNewScale = colWidth / 176.75;
-				redRect.scaleX = rectNewScale;
+				var rectNewScaleX = colWidth / 176.75;
+				redRect.scaleX = rectNewScaleX;
+				var rectNewScaleY = rowHeight / 65.6;
+				redRect.scaleY = rectNewScaleY;
 				scoreWindow.addChild(redRect);
 				scoreWinEl.push(redRect);
 			}
@@ -1012,10 +1018,10 @@ function muteAllSounds(event) {
 // loads image on plane
 function addBitmapToScore(bitmap, x, y, w, h) {
 	// adapt size and position
-	const IMG_X = x;
-	const IMG_Y = y;
-	const IMG_W = w;
-	const IMG_H = h;
+	const IMG_X = x + 1 ;
+	const IMG_Y = y + 1 ;
+	const IMG_W = w - 2 ;
+	const IMG_H = h - 2 ;
 	// postion image
 	bitmap.x = IMG_X;
 	bitmap.y = IMG_Y;
