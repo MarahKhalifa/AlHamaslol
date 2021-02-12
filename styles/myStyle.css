@@ -1,11 +1,11 @@
 ﻿@font-face {
     font-family: Abraham;
-    src: url('./Abraham-Regular.ttf');  
+    src: url("Abraham-Regular.ttf");  
 }
 
 @font-face {
     font-family: Alef;
-    src: url('./Alef-Regular.ttf');
+    src: url("styles/Alef-Regular.ttf");
 }
 
 body {
