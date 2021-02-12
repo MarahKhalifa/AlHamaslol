@@ -1,35 +1,29 @@
-﻿@font-face {
-    font-family: "Abraham";
-    src: url("styles/Abraham-Regular.ttf");  
-}
-
-@font-face {
-    font-family: "Alef";
-    src: url("styles/Alef-Regular.ttf");
-}
-
-body {
-    /*background-color: #C1EDFF;*/
-    /*background-color: white;*/
-    background-color: #ffd7ba;
+﻿body {
+    background-image: url("../assets/background.png");
+    background-color: rgb(57, 145, 70);
     font-family: 'Assistant', sans-serif;
+    background-repeat: repeat-x;
+}
+
+#container {
+    /* background-image: url("../background.png"); */
+    /* background-color: rgb(57, 145, 70); */
 }
 
 iframe {
     border: 0;
-    height: 720px;
+    height: 100%;
     left: 0;
     position: absolute;
     top: 0;
-    width: 1280px;
-    margin: 0 auto;
+    width: 100%;
 }
 
 #gameArea {
     overflow: hidden;
     position: relative;
-    height: 720px;
-    width: 1280px;
+    height: 80vh;
+    width: 90vw;
     margin: 0 auto;
 }
 
@@ -38,7 +32,7 @@ iframe {
 }
 
 header {
-    background-color: rgb(196,153,108);
+    background-color: rgb(123,140,151);
     width: 100%;
     height: 50px;
     position: relative;
@@ -50,7 +44,7 @@ header {
 
     /*כותרת משחק*/
     header > a > p {
-        font-family: 'Assistant', sans-serif;
+        font-family: Abraham;
         font-size: 12pt;
         font-weight: 600;
         position: relative;
@@ -87,12 +81,12 @@ nav {
 
             nav ul li a {
                 display: block;
-                color: rgb(30, 104, 177);
+                color: rgb(252, 216, 54);
                 text-align: center;
                 padding: 3px 10px;
                 font-weight: 400;
                 font-size: 12pt;
-                font-family: 'Assistant', sans-serif;
+                font-family: Abraham;
                 direction: rtl;
                 text-decoration: none;
             }
@@ -100,13 +94,13 @@ nav {
                 nav ul li a:hover {
                     font-weight: 600;
                     cursor: pointer;
-                    font-family: 'Assistant', sans-serif;
+                    font-family: Abraham;
                     direction: rtl;
                     text-decoration: none;
                 }
 
 .popUp {
-    background-color: white;
+    /* background-color: white; */
     width: 400px;
     position: fixed;
     top: 60px;
@@ -121,7 +115,7 @@ nav {
     margin-right: auto;
     margin-left: auto;
     direction: rtl;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .bounceInDown {
@@ -199,4 +193,38 @@ nav {
         -webkit-transform: none;
         transform: none;
     }
+}
+
+.freeKey {
+    position: absolute;
+    cursor: pointer;
+}
+
+a#closeAbout {
+    top: 11px;
+    left: 85px;
+    width: 50px;
+    height: 50px;
+}
+
+a#hitLink {
+    top: 291px;
+    left: 265px;
+    width: 197px;
+    height: 110px;
+}
+
+a#telem {
+    top: 415px;
+    left: 234px;
+    width: 245px;
+    height: 35px;
+}
+
+#howToPlayDivVideo {
+    position: absolute;
+    width: 495px;
+    height: 345px;
+    top: 120px;
+    left: 110px;
 }
