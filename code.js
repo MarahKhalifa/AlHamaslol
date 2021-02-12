@@ -232,7 +232,7 @@ const PLANE_X_ANSWER_END = -180;
 
 // plane speed variables
 var currentSpeed = 0;
-var speeds = [3, 7, 9];
+var speeds = [3, 6, 9];
 var planeSpeed = speeds[currentSpeed];
 
 // current question and answer
@@ -943,17 +943,11 @@ function muteAllSounds(event) {
 	if (event.currentTarget.currentFrame == 0) {
 		event.currentTarget.gotoAndStop(1);
 		flySound.stop();
-		//ohNoSound.stop();
-		//goodJobSound.stop();
-		//gameOverSound.stop();
 		backgroundSound.stop();
 	}
 	else {
 		event.currentTarget.gotoAndStop(0);
 		flySound.play();
-		//ohNoSound.stop();
-		//goodJobSound.stop();
-		//gameOverSound.stop();
 		backgroundSound.play();
 		backgroundSound.volume = 0.05;
 	}
