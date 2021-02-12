@@ -10,14 +10,10 @@
 
 body {
     background-image: url("../assets/background.png");
+    background-size: 1280px;
     background-color: rgb(57, 145, 70);
     font-family: 'Assistant', sans-serif;
     background-repeat: repeat-x;
-}
-
-#container {
-    /* background-image: url("../background.png"); */
-    /* background-color: rgb(57, 145, 70); */
 }
 
 iframe {

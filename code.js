@@ -1,13 +1,6 @@
 var self = this;
 stage.enableMouseOver();
 
-// =+=+=+=+=+=+=+=+=+=+=+
-// Notes
-// =+=+=+=+=+=+=+=+=+=+=+
-
-// display game board with fade in
-// exit btn when pause
-
 // ====================================
 // Create Objects and Define Positions
 // ====================================
@@ -146,14 +139,7 @@ instructions.instructionsText.x = 363;
 instructions.instructionsText.font = "16px Alef"
 
 // start botton
-instructions.startBtn.addEventListener("click", function(event){
-	event.currentTarget.visible = false;
-	if(instructions.soundBtn.currentFrame == 0) {
-		backgroundSound.play();
-		backgroundSound.volume = 0.05;
-	}
-	startNewQuestion();
-});
+instructions.startBtn.addEventListener("click", instructionsStartBtn);
 instructions.startBtn.cursor = "pointer";
 
 // speed levels
@@ -172,7 +158,6 @@ for (var i=0; i<speedLevels.length; i++){
 }
 speedLevels[0].alpha = 1;
 
-
 // pause button
 instructions.pauseBtn.addEventListener("click", pauseGame);
 instructions.pauseBtn.cursor = "pointer";
@@ -190,48 +175,18 @@ login.visible = false;
 // login start botton
 login.startBtn.addEventListener("click", initializeGame);
 login.startBtn.gotoAndStop(1);
-// game choice text
-var selectedGame = null;
 // first btn
-login.gameChoice1.cursor = "pointer";
-login.gameChoice1.btnText.text = 'גיאוגרפיה';
-login.gameChoice1.addEventListener('mouseover', function(event){ 
-	if ( selectedGame != 0 ) {
-		event.currentTarget.gotoAndStop(1);
-	}
-})
-login.gameChoice1.addEventListener('mouseout', function(event){
-	if ( selectedGame != 0 ) {
-		event.currentTarget.gotoAndStop(0);
-	}  
-});
-login.gameChoice1.addEventListener('click', function(event){ 
-	event.currentTarget.gotoAndStop(2); 
-	login.gameChoice2.gotoAndStop(0);
-	login.startBtn.cursor = "pointer";
-	login.startBtn.gotoAndStop(0);
-	selectedGame = 0;
-});
+login.gameChoice0.cursor = "pointer";
+login.gameChoice0.btnText.text = 'גיאוגרפיה';
+login.gameChoice0.addEventListener('mouseover', mouseOverGameChoice);
+login.gameChoice0.addEventListener('mouseout', mouseOutGameChoice);
+login.gameChoice0.addEventListener('click', clickGameChoice);
 // second btn
-login.gameChoice2.cursor = "pointer";
-login.gameChoice2.btnText.text = 'חשבון';
-login.gameChoice2.addEventListener('mouseover', function(event){ 
-	if ( selectedGame != 1){
-		event.currentTarget.gotoAndStop(1);
-	}
- });
-login.gameChoice2.addEventListener('mouseout', function(event){ 
-	if ( selectedGame != 1 ){
-		event.currentTarget.gotoAndStop(0);
-	} 
-});
-login.gameChoice2.addEventListener('click', function(event){ 
-	event.currentTarget.gotoAndStop(2); 
-	login.gameChoice1.gotoAndStop(0);
-	login.startBtn.cursor = "pointer";
-	login.startBtn.gotoAndStop(0);
-	selectedGame = 1;
-});
+login.gameChoice1.cursor = "pointer";
+login.gameChoice1.btnText.text = 'חשבון';
+login.gameChoice1.addEventListener('mouseover', mouseOverGameChoice);
+login.gameChoice1.addEventListener('mouseout', mouseOutGameChoice);
+login.gameChoice1.addEventListener('click', clickGameChoice);
 
 // create delay message
 var delayMsg = new lib.delayMsg();
@@ -266,31 +221,32 @@ scoreWindow.endBtn.cursor = 'pointer';
 scoreWindow.playAgainBtn.addEventListener('click', initializeGame);
 scoreWindow.playAgainBtn.cursor = 'pointer';
 
-// array for storing score table in order to be able to delete them at restart
-var scoreWinEl = [];
-
 // ====================================
 // Define Variables
 // ====================================
+
+// define constants
+const PLANE_FLY_OUT_SPEED = 17;
+const PLANE_X_ANSWER_START = 930;
+const PLANE_X_ANSWER_END = -180;
 
 // plane speed variables
 var currentSpeed = 0;
 var speeds = [3, 7, 9];
 var planeSpeed = speeds[currentSpeed];
-const PLANE_FLY_OUT_SPEED = 17;
 
 // current question and answer
 var currentQues = null;
 var currentAns = null;
 var currentQuesStartTime = null;
-const PLANE_X_ANSWER_START = 930;
-const PLANE_X_ANSWER_END = -180;
 
-// ?
+// define game variables
+var selectedGame = null;
 var unansweredQuestions = null;
 var lastQuestion = null;
 var countMultiMiss = 0;
-var planeInterval; // global variable for handling plane fly interval
+var planeInterval; 				// global variable for handling plane fly interval
+var scoreWinEl = [];			// stores score table elements in order to be able to delete them at restart
 
 // define database
 var database = [ 
@@ -359,33 +315,34 @@ var database = [
 }
 ];
 
-// database builder
+// current game database
 var quesItemArray = [];
 var categoryArray = [];
 var bitmaps = [];
-
 
 // ====================================
 // Define Functions
 // ====================================
 
-// play new game
+// play new game(login window)
 function playGame(){
-
 	// hide score (if displayed)
 	scoreWindow.visible = false;
 
-	// reset tower index
+	// reset tower display index
 	stage.setChildIndex( tower, 4);
 	stage.setChildIndex( inspectorFeedback, 6);
+	// hide inspector feedback
 	inspectorFeedback.visible = false;
 
-	// login window
+	// show login window
 	selectedGame = null;
 	blackScreen.visible = true;
 	login.visible = true;
+	login.startBtn.gotoAndStop(1);
+	login.startBtn.cursor = "default";
+	login.gameChoice0.gotoAndStop(0);
 	login.gameChoice1.gotoAndStop(0);
-	login.gameChoice2.gotoAndStop(0);
 }
 
 // initialize game
@@ -396,7 +353,6 @@ function initializeGame() {
 		for (var i=0; i<database[selectedGame].categories.length; i++) {
 			categoryArray.push({
 				name: database[selectedGame].categories[i],
-				animation: "planeLand-"+i
 			});
 		}
 		quesItemArray=[];
@@ -411,7 +367,9 @@ function initializeGame() {
 				status: false,
 				time: null
 			});
-			if ( database[selectedGame].questions[i].type == 'img' ) { // image
+			// image qusetion
+			if ( database[selectedGame].questions[i].type == 'img' ) {
+				// create new image, onload store image to bitmaps as a bitmap
 				var image = new Image();
 				image.onload = storeImgToplane;
 				image.alt = i;
@@ -444,6 +402,7 @@ function initializeGame() {
 		instructions.startBtn.visible = true;
 		instructions.soundBtn.gotoAndStop(0);
 		instructions.instructionsText.text = database[selectedGame].instructionsText;
+		// reset speed level to low
 		speedLevels[0].alpha = 1;
 		speedLevels[1].alpha = 0.1;
 		speedLevels[2].alpha = 0.1;
@@ -467,24 +426,20 @@ function initializeGame() {
 
 // start a new question
 function startNewQuestion() {
+	// plane didn't pass more than 3 times in a row
 	if (countMultiMiss < 3){
-		blackScreen.visible = false;
 		// reset signs feedback
 		signs.forEach( (sign) => { sign.gotoAndStop(0); } );
-		
-		// update signs
-		for (var i=0; i<categoryArray.length; i++){
-			signs[i].getChildByName('signText').text = categoryArray[i].name;
-			signs[i].getChildByName('signText').y = 35 - signs[i].getChildByName('signText').getMeasuredHeight()/2;
-		}
 		// reset feedback
 		inspectorFeedback.visible = false;
 
 		lastQuestion = currentQues;
 		currentQues = randomQuestion(); // pick a random question
 		if (currentQues != null ) { 	// there is a non-answered question
-			if ( quesItemArray[currentQues].type == 'text') {
+			if ( quesItemArray[currentQues].type == 'text') {	// question type text
+				// update plane text
 				planeText.text = quesItemArray[currentQues].name;
+				// adjust font size depends on text length
 				if ( planeText.text.length < 20 ) {
 					planeText.font = "25px Alef";
 				} else if ( planeText.text.length < 36 ) {
@@ -492,30 +447,31 @@ function startNewQuestion() {
 				} else {
 					planeText.font = "18px Alef";
 				}
+				// adjust text position
 				planeText.y = 50 -  planeText.getMeasuredHeight()/2;
 			}
-			else {
-				planeText.text = '';
+			else {												// question type text
+				planeText.text = '';	// clear text
+				// find current question bitmap, add it to plane
 				bitmapsIndex = bitmaps.findIndex( (bmp) => { return bmp.question == currentQues; });
 				plane.addChild(bitmaps[bitmapsIndex].bitmap);
         	}
 
+			// update variables
 			currentAns = null;
 			planeSpeed = speeds[currentSpeed]; // reset plane speed to user choice
-			startplaneFly();
-			if(instructions.soundBtn.currentFrame == 0) {
-				flySound.play();
-			}
-			else {
-				flySound.stop();
-			}
 			currentQuesStartTime = null;
+			startPlaneFly();
+			// play sound (if not muted)
+			if ( instructions.soundBtn.currentFrame == 0 ) 	{	flySound.play();	}
+			else 											{	flySound.stop();	}
 		} 
 		else { 							// no more question
-			console.log("Game Ended");
+			// plat game over sound
 			if(instructions.soundBtn.currentFrame == 0) {
 				gameOverSound.play();
 			}
+			// show score window
 			showScore();
 		}
 	}
@@ -528,18 +484,17 @@ function startNewQuestion() {
 // checks the answer of the sign clicked
 function checkAnswer(event) {
 	if (currentAns == null && 				// if user didn't answer current question yet
-		PLANE_X_ANSWER_START > plane.x &&	// and plane is at available range
+		PLANE_X_ANSWER_START > plane.x &&	// plane is at available answer range
 		PLANE_X_ANSWER_END < plane.x		){	 
+		// get clicked sign name (num)
 		currentAns = parseInt(event.currentTarget.name.charAt(4));
 		if (quesItemArray[currentQues].answer == currentAns){	// correct answer
 			// calculate question time
 			var currentAnsTime = new Date();
 			quesItemArray[currentQues].time = (currentAnsTime.getTime() - currentQuesStartTime.getTime())/1000;
-			console.log('current ques time: '+quesItemArray[currentQues].time);
-
+			// update variables
 			quesItemArray[currentQues].status = true;
 			unansweredQuestions--;
-			console.log ("Yessssssssssssss!!");
 
 			// green feedback
 			event.currentTarget.gotoAndStop(1);
@@ -556,8 +511,6 @@ function checkAnswer(event) {
 			}
 		}
 		else{													// wrong answer
-			console.log ("nooooooooo");
-
 			// red feedback
 			event.currentTarget.gotoAndStop(2);
 			inspectorFeedback.visible = true;
@@ -573,27 +526,27 @@ function checkAnswer(event) {
 		}
 		// speed up plane
 		planeSpeed = PLANE_FLY_OUT_SPEED;
-		console.log('speedUp');
 
-		// add try count
+		// update tries count
 		quesItemArray[currentQues].try++;
 		countMultiMiss = 0;
 	}
 }
 
-// start plane flying
-function startplaneFly(){
+// start plane flying (interval)
+function startPlaneFly(){
 	plane.x = 1280;
 	planeInterval = setInterval( planeMoveOneStep ,1000/24);
 }
 
-// stop plane flying
-function stopplaneFly(){
+// stop plane flying (interval)
+function stopPlaneFly(){
 	clearInterval(planeInterval);
 }
 
-// plane one step movment
+// plane one step movement
 function planeMoveOneStep(){
+	// update plane position
 	plane.x = plane.x - planeSpeed;
 	// fadein sound
 	if ( plane.x > PLANE_X_ANSWER_START ) {
@@ -601,19 +554,22 @@ function planeMoveOneStep(){
 		var passedDistance = 1280 - plane.x;
 		flySound.volume = 0.5*(passedDistance/fadeInDistance);
 	}
-	// set question start time
-	if ( plane.x < PLANE_X_ANSWER_START && currentQuesStartTime == null ) { // plane passed the start point
-		currentQuesStartTime = new Date();
-	}
 	// fadeout sound
 	if ( plane.x < PLANE_X_ANSWER_END ) {
 		var fadeOutDistance = PLANE_X_ANSWER_END - (-474) ;
 		var remainingDistance = plane.x - (-474);
 		flySound.volume = 0.5*(remainingDistance/fadeOutDistance);
 	}
-	if ( plane.x <= -474 ) { // plane arrived to the edge
+	// set question start time
+	if ( plane.x < PLANE_X_ANSWER_START && currentQuesStartTime == null ) { // plane passed the start point
+		currentQuesStartTime = new Date();
+	}
+
+	// plane arrived to the edge - stop plane, play next funtions
+	if ( plane.x <= -474 ) {
 		flySound.stop();
-		stopplaneFly();
+		stopPlaneFly();		// stop interval
+		
 		// remove img if exists
 		var img = plane.getChildByName('img');
 		if (img != null ) {
@@ -644,8 +600,6 @@ function planeMoveOneStep(){
 				airplaneApproach.visible = true;
 				airplaneApproach.gotoAndPlay(0);
 				airplaneApproach.addEventListener("tick", lastApproachFrame);
-				
-				// starts new question at plane landing last frame listener
 			}
 			else {														// wrong answer
 				startNewQuestion();
@@ -653,7 +607,6 @@ function planeMoveOneStep(){
 		}
 		else {															// user didn't answer current question
 			countMultiMiss++;
-			console.log('countMultiMiss: '+countMultiMiss);
 			quesItemArray[currentQues].try++;
 			startNewQuestion();
 		}
@@ -662,7 +615,7 @@ function planeMoveOneStep(){
 
 // plane approach last frame listener
 function lastApproachFrame(){ 
-	if (airplaneApproach.currentFrame == 30 ) {
+	if (airplaneApproach.currentFrame == 30 ) {		// 30 is the last frame
 		// stop approach
 		airplaneApproach.gotoAndStop(0);
 		airplaneApproach.visible = false;
@@ -679,7 +632,7 @@ function lastApproachFrame(){
 
 // plane landing last frame listener
 function lastlandingFrame(){ 
-	if (landing.currentFrame == 142 ) {
+	if (landing.currentFrame == 142 ) {		// 142 is the last frame
 		// stop landing
 		landing.gotoAndStop(0);
 		landing.visible = false;
@@ -697,24 +650,7 @@ function lastlandingFrame(){
 	}
 }
 
-// change speed to num (0, 1 or 2)
-function changeSpeed(event){
-	var num = parseInt(event.currentTarget.name.charAt(5));
-	// check if new speed isn't same as current speed 
-	if ( num != currentSpeed) {
-		// change old speed alpha
-		speedLevels[currentSpeed].alpha = 0.1;
-		currentSpeed = num;
-		// change new speed alpha
-		speedLevels[currentSpeed].alpha = 1;
-		// change speed if plane is not at fly out
-		if ( planeSpeed != PLANE_FLY_OUT_SPEED ){
-			planeSpeed = speeds[currentSpeed];
-		}
-	} 
-}
-
-// pick a random question
+// picks a random question
 function randomQuestion(){
 	var remainingQuestions = [];
 	// collect remaining questions
@@ -741,31 +677,32 @@ function randomQuestion(){
 	}
 }
 
-// prints the score to console
+// shows score window
 function showScore() {
+	// calculates max time for a question, min time to full score
 	var maxTime = (PLANE_X_ANSWER_START-PLANE_X_ANSWER_END)/(24*speeds[0]);
 	var minTime = 0.3*maxTime;
 
 	var totalTime = 0;
 	var totalMisses = 0;
 	var finalScore = 0;
-	var quesCountPerCat = [];
-	categoryArray.forEach( () => { quesCountPerCat.push(0); } );
+	var categoryCounter = [];
+	categoryArray.forEach( () => { categoryCounter.push(0); } ); // [ 0, 0, 0, 0 ]
 
 	for (var i=0; i<quesItemArray.length; i++){
 		var currentTime = quesItemArray[i].time;
-		var tScore = 100;
-		if ( currentTime > minTime ) {
+		var tScore = 100;					// full score
+		if ( currentTime > minTime ) {		// reduce points depends on current question time
 			tScore -= (((currentTime-minTime)/(maxTime-minTime)) * (100-80));
 		}
 
-		// total
+		// add qustion to total
 		totalTime += currentTime;
 		totalMisses += (quesItemArray[i].try - 1);
 		finalScore += ((tScore / quesItemArray[i].try)/quesItemArray.length);
 		
 		// update category counter
-		quesCountPerCat[quesItemArray[i].answer]++;
+		categoryCounter[quesItemArray[i].answer]++;
 	}
 
 	// floor numbers
@@ -776,7 +713,7 @@ function showScore() {
 				':' +
 				(((totalTime%60)<10)?('0'+totalTime%60):totalTime%60);
 
-	console.log("Total Time: "+totalTime+" Total Misses:"+totalMisses+" Final Score:"+finalScore);
+	// update score window
 	scoreWindow.finalScore.text = finalScore;
 	scoreWindow.totalTime.text = totalTimeStr;
 	scoreWindow.totalMisses.text = totalMisses;
@@ -796,19 +733,22 @@ function showScore() {
 
 	// find max category length
 	var maxCatLength = 0;
-	quesCountPerCat.forEach( (count) => { 
-		if ( count > maxCatLength) { 
-			maxCatLength = count; 
+	for (var i=0; i<categoryCounter.length; i++){
+		if ( categoryCounter[i] > maxCatLength) {
+			maxCatLength = categoryCounter[i]; 
 		} 
-	} );
+		// reset for further use
+		categoryCounter[i] = 0;
+	}
 
+	// set position calculating measurments
 	var headerY = 114.25;
 	var tableX = 27.35;
 	var tableY = 162.2;
 	var colWidth = (530.25 / categoryArray.length);
 	var rowHeight = 327.9 / maxCatLength ;
-	var categoryCounter = [];
-	// create headers
+
+	// create score headers
 	for (var i=0; i<categoryArray.length; i++){
 		var catHeader = new createjs.Text();
 		catHeader.text = categoryArray[i].name;
@@ -819,17 +759,16 @@ function showScore() {
 		catHeader.lineWidth = colWidth;
 		catHeader.textAlign = "center";
 		scoreWindow.addChild(catHeader);
-		scoreWinEl.push(catHeader);
-		categoryCounter.push(0);		
+		scoreWinEl.push(catHeader);	
 	}
 
-	// create table
+	// create score table
 	for (var i=0; i<quesItemArray.length; i++){
-		if ( quesItemArray[i].type == 'text' ) {
+		if ( quesItemArray[i].type == 'text' ) {	// text question
 			var tableEl = new createjs.Text();
 			tableEl.text = quesItemArray[i].description;
 			tableEl.font = "15pt Alef";
-			tableEl.color = (quesItemArray[i].try > 1)?"red":"black";
+			tableEl.color = (quesItemArray[i].try > 1)?"red":"black";	// red color for extra tries
 			tableEl.x = tableX + (colWidth*quesItemArray[i].answer) + (colWidth/2);
 			tableEl.y = tableY + (rowHeight*categoryCounter[quesItemArray[i].answer]) + rowHeight*0.5;
 			tableEl.lineWidth = colWidth;
@@ -838,19 +777,19 @@ function showScore() {
 			scoreWindow.addChild(tableEl);
 			scoreWinEl.push(tableEl);
 		} 
-		else {
-			// image
+		else {										// image question
 			var x = tableX + (colWidth*quesItemArray[i].answer);
 			var y = tableY + (rowHeight*categoryCounter[quesItemArray[i].answer]);
 			bitmapsIndex = bitmaps.findIndex( (bmp) => { return bmp.question == i; });
 			addBitmapToScore(bitmaps[bitmapsIndex].bitmap, x, y, colWidth, rowHeight);
-			if (quesItemArray[i].try > 1) {		// if there are more than 1 try
+			// show red rectangle for extra tries
+			if (quesItemArray[i].try > 1) {		
 				var redRect = new lib.redRect();
 				redRect.x = x;
 				redRect.y = y;
-				var rectNewScaleX = colWidth / 176.75;
+				var rectNewScaleX = colWidth / 176.75;		// 176.75 symbol width
 				redRect.scaleX = rectNewScaleX;
-				var rectNewScaleY = rowHeight / 65.6;
+				var rectNewScaleY = rowHeight / 65.6;		// 65.6 symbol height
 				redRect.scaleY = rectNewScaleY;
 				scoreWindow.addChild(redRect);
 				scoreWinEl.push(redRect);
@@ -860,17 +799,15 @@ function showScore() {
 	}
 }
 
-// show pause window
+// shows pause window or delay msg
 function pauseGame() {
 	// -- hide elements
 	// hide instructions
 	instructions.visible = false;
-	// stop background music
-	backgroundSound.stop();
 
 	// -- hide plane
 	// plane is flying
-	stopplaneFly();
+	stopPlaneFly();
 	plane.x = 1280;
 	// plane is on approach
 	airplaneApproach.removeEventListener('tick', lastApproachFrame);
@@ -883,7 +820,7 @@ function pauseGame() {
 	landing.scaleX = 1;
 	landing.scale = 1;
 	landing.y = 236.75;
-	// remove img if exists
+	// remove img on plane if exists
 	var img = plane.getChildByName('img');
 	if (img != null ) {
 		plane.removeChild(img);
@@ -898,6 +835,7 @@ function pauseGame() {
 	inspectorFeedback.visible = false;
 
 	// stop sound
+	backgroundSound.stop();
 	flySound.stop();
 
 	// -- show elements
@@ -915,7 +853,6 @@ function pauseGame() {
 
 // resume game after pause or delay
 function resumeGame() {
-	console.log('resumeGame');
 	// hide black screen
 	blackScreen.visible = false;
 	// play background music
@@ -931,37 +868,22 @@ function resumeGame() {
 	else{
 		pauseMsg.visible = false;
 	}
-	
-	//זמן נחיתה 
 
 	// show instructions
 	instructions.visible = true;
 	// show text on signs
-	// categorysign.forEach( (sign) => { sign.visible = true; } );
 	signs.forEach( (sign) => { sign.getChildByName('signText').visible = true; } );
-	// show plane
+	// show plane and new question
 	startNewQuestion();
-
 }
 
-function mouseOverSpeedLevel(event){
-	if ( event.currentTarget.alpha == 0.1 ) {
-		event.currentTarget.alpha = 0.5;
-	}
-}
-
-function mouseOutSpeedLevel(event){
-	if ( event.currentTarget.alpha == 0.5 ) {
-		event.currentTarget.alpha = 0.1;
-	}
-}
-
-// loads image on plane
+// stores image as a bitmap, prepared to load on plane
 function storeImgToplane(event) {
+	// create bitmap from image triggered this function
 	var bitmap = new createjs.Bitmap(event.currentTarget);
 	bitmap.name = 'img';
 	
-	// adapt size and position
+	// -- adapt size and position
 	const IMG_X = 289;
 	const IMG_Y = 15;
 	const IMG_W = 127;
@@ -983,11 +905,40 @@ function storeImgToplane(event) {
 		bitmap.x += ( (IMG_W - (bitmap.getBounds().width*picHeight) ) /2);
 	}
 
+	// stroe to bimaps array
 	bitmaps.push({question: event.currentTarget.alt, bitmap: bitmap});
-	console.log(bitmap);
 }
 
-// mute all sounds
+// add image question bitmap to score
+function addBitmapToScore(bitmap, x, y, w, h) {
+	// -- adapt size and position
+	const IMG_X = x + 1 ;
+	const IMG_Y = y + 1 ;
+	const IMG_W = w - 2 ;
+	const IMG_H = h - 2 ;
+	// postion image
+	bitmap.x = IMG_X;
+	bitmap.y = IMG_Y;
+	// scale image depends on its width and height ratio
+	if (bitmap.getBounds().width > ((IMG_W/IMG_H)*bitmap.getBounds().height)) {
+		var picWidth = IMG_W / bitmap.getBounds().width;
+		bitmap.scale = picWidth;
+		// update position
+		bitmap.y += ( (IMG_H - (bitmap.getBounds().height*picWidth) ) /2); 
+	} 
+	else {		
+		var picHeight = IMG_H / bitmap.getBounds().height;
+		bitmap.scale = picHeight;
+		// update position
+		bitmap.x += ( (IMG_W - (bitmap.getBounds().width*picHeight) ) /2);
+	}
+
+	// add bitmap to score window & store it in elements (to be removed further)
+	scoreWindow.addChild(bitmap);
+	scoreWinEl.push(bitmap);
+}
+
+// mutes all sounds
 function muteAllSounds(event) {
 	if (event.currentTarget.currentFrame == 0) {
 		event.currentTarget.gotoAndStop(1);
@@ -1010,31 +961,91 @@ function muteAllSounds(event) {
 
 }
 
-// loads image on plane
-function addBitmapToScore(bitmap, x, y, w, h) {
-	// adapt size and position
-	const IMG_X = x + 1 ;
-	const IMG_Y = y + 1 ;
-	const IMG_W = w - 2 ;
-	const IMG_H = h - 2 ;
-	// postion image
-	bitmap.x = IMG_X;
-	bitmap.y = IMG_Y;
-	// scale image depends on its width and height ratio
-	if (bitmap.getBounds().width > ((IMG_W/IMG_H)*bitmap.getBounds().height)) {
-		var picWidth = IMG_W / bitmap.getBounds().width;
-		bitmap.scale = picWidth;
-		// update position
-		bitmap.y += ( (IMG_H - (bitmap.getBounds().height*picWidth) ) /2); 
-	} 
-	else {		
-		var picHeight = IMG_H / bitmap.getBounds().height;
-		bitmap.scale = picHeight;
-		// update position
-		bitmap.x += ( (IMG_W - (bitmap.getBounds().width*picHeight) ) /2);
+// mouse starts hover over speed level
+function mouseOverSpeedLevel(event){
+	if ( event.currentTarget.alpha == 0.1 ) {	// level is not selected
+		event.currentTarget.alpha = 0.5;
 	}
-	scoreWindow.addChild(bitmap);
-	scoreWinEl.push(bitmap);
+}
+
+// mouse stops hover over speed level
+function mouseOutSpeedLevel(event){
+	if ( event.currentTarget.alpha == 0.5 ) {	// level is not selected
+		event.currentTarget.alpha = 0.1;
+	}
+}
+
+// changes speed to clicked speed level
+function changeSpeed(event){
+	// get clicked level name (num)
+	var num = parseInt(event.currentTarget.name.charAt(5));
+	// check if new speed isn't same as current speed 
+	if ( num != currentSpeed) {
+		// change old speed alpha
+		speedLevels[currentSpeed].alpha = 0.1;
+		currentSpeed = num;
+		// change new speed alpha
+		speedLevels[currentSpeed].alpha = 1;
+		// change speed if plane is not at fly out
+		if ( planeSpeed != PLANE_FLY_OUT_SPEED ){
+			planeSpeed = speeds[currentSpeed];
+		}
+	} 
+}
+
+// instructions start button clicked
+function instructionsStartBtn(event){
+	// hide button
+	event.currentTarget.visible = false;
+	// play background sound
+	if(instructions.soundBtn.currentFrame == 0) {
+		backgroundSound.play();
+		backgroundSound.volume = 0.05;
+	}
+	// clear black screen
+	blackScreen.visible = false;
+	// update signs text
+	for (var i=0; i<categoryArray.length; i++){
+		signs[i].getChildByName('signText').text = categoryArray[i].name;
+		// update position
+		signs[i].getChildByName('signText').y = 35 - signs[i].getChildByName('signText').getMeasuredHeight()/2;
+	}
+	// start new question
+	startNewQuestion();
+}
+
+// mouse starts hover over game choice
+function mouseOverGameChoice(event){
+	var currentGameBtn = parseInt(event.currentTarget.name.charAt(10));
+	if ( selectedGame != currentGameBtn ) {
+		event.currentTarget.gotoAndStop(1);
+	}
+}
+
+// mouse stops hover over game choice
+function mouseOutGameChoice(event){
+	var currentGameBtn = parseInt(event.currentTarget.name.charAt(10));
+	if ( selectedGame != currentGameBtn ) {
+		event.currentTarget.gotoAndStop(0);
+	}
+}
+
+// selects a game (triggered by game choice button) 
+function clickGameChoice(event){ 
+	var currentGameBtn = parseInt(event.currentTarget.name.charAt(10));
+	console.log(event.currentTarget.name);
+	console.log(event.currentTarget.name.charAt(10));
+	event.currentTarget.gotoAndStop(2);
+	if ( event.currentTarget.name == 'gameChoice1' ) {
+		login.getChildByName('gameChoice0').gotoAndStop(0);
+	}
+	else {
+		login.getChildByName('gameChoice1').gotoAndStop(0);
+	}
+	
+	login.startBtn.cursor = "pointer";
+	login.startBtn.gotoAndStop(0);
+	selectedGame = currentGameBtn;
 }
 
 // ==============================

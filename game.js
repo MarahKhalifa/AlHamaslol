@@ -37,440 +37,440 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_576 = function() {
+(lib.CachedBmp_704 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_574 = function() {
+(lib.CachedBmp_702 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_573 = function() {
+(lib.CachedBmp_701 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_572 = function() {
+(lib.CachedBmp_700 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_571 = function() {
+(lib.CachedBmp_699 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_570 = function() {
+(lib.CachedBmp_698 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_569 = function() {
+(lib.CachedBmp_697 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_582 = function() {
+(lib.CachedBmp_710 = function() {
 	this.initialize(ss["game_atlas_9"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_567 = function() {
+(lib.CachedBmp_695 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_566 = function() {
+(lib.CachedBmp_694 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(8);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_565 = function() {
+(lib.CachedBmp_693 = function() {
 	this.initialize(ss["game_atlas_10"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_564 = function() {
+(lib.CachedBmp_692 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(9);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_563 = function() {
+(lib.CachedBmp_691 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(10);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_581 = function() {
+(lib.CachedBmp_709 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(11);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_561 = function() {
+(lib.CachedBmp_689 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(12);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_560 = function() {
+(lib.CachedBmp_688 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(13);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_559 = function() {
+(lib.CachedBmp_687 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(14);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_558 = function() {
+(lib.CachedBmp_686 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(15);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_557 = function() {
+(lib.CachedBmp_685 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(16);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_556 = function() {
+(lib.CachedBmp_684 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(17);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_555 = function() {
+(lib.CachedBmp_683 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(18);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_554 = function() {
+(lib.CachedBmp_682 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(19);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_553 = function() {
+(lib.CachedBmp_681 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(20);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_552 = function() {
+(lib.CachedBmp_680 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(21);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_580 = function() {
+(lib.CachedBmp_708 = function() {
 	this.initialize(ss["game_atlas_8"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_550 = function() {
+(lib.CachedBmp_678 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(22);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_549 = function() {
+(lib.CachedBmp_677 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(23);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_575 = function() {
+(lib.CachedBmp_703 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(24);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_547 = function() {
+(lib.CachedBmp_675 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(25);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_546 = function() {
+(lib.CachedBmp_674 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(26);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_545 = function() {
+(lib.CachedBmp_673 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(27);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_544 = function() {
+(lib.CachedBmp_672 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(28);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_543 = function() {
+(lib.CachedBmp_671 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(29);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_542 = function() {
+(lib.CachedBmp_670 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(30);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_579 = function() {
+(lib.CachedBmp_707 = function() {
 	this.initialize(ss["game_atlas_10"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_540 = function() {
+(lib.CachedBmp_668 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(31);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_539 = function() {
+(lib.CachedBmp_667 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(32);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_578 = function() {
+(lib.CachedBmp_706 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(33);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_537 = function() {
+(lib.CachedBmp_665 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(34);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_577 = function() {
+(lib.CachedBmp_705 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(35);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_535 = function() {
+(lib.CachedBmp_663 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(36);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_534 = function() {
+(lib.CachedBmp_662 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(37);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_533 = function() {
+(lib.CachedBmp_661 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(38);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_532 = function() {
+(lib.CachedBmp_660 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(39);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_531 = function() {
-	this.initialize(img.CachedBmp_531);
+(lib.CachedBmp_659 = function() {
+	this.initialize(img.CachedBmp_659);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
 
 
-(lib.CachedBmp_530 = function() {
+(lib.CachedBmp_658 = function() {
 	this.initialize(ss["game_atlas_6"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_529 = function() {
+(lib.CachedBmp_657 = function() {
 	this.initialize(ss["game_atlas_6"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_528 = function() {
+(lib.CachedBmp_656 = function() {
 	this.initialize(ss["game_atlas_9"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_527 = function() {
+(lib.CachedBmp_655 = function() {
 	this.initialize(ss["game_atlas_8"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_526 = function() {
+(lib.CachedBmp_654 = function() {
 	this.initialize(ss["game_atlas_5"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_525 = function() {
+(lib.CachedBmp_653 = function() {
 	this.initialize(ss["game_atlas_2"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_524 = function() {
+(lib.CachedBmp_652 = function() {
 	this.initialize(ss["game_atlas_3"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_523 = function() {
+(lib.CachedBmp_651 = function() {
 	this.initialize(ss["game_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_522 = function() {
+(lib.CachedBmp_650 = function() {
 	this.initialize(ss["game_atlas_5"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_521 = function() {
+(lib.CachedBmp_649 = function() {
 	this.initialize(ss["game_atlas_7"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_520 = function() {
+(lib.CachedBmp_648 = function() {
 	this.initialize(ss["game_atlas_7"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_519 = function() {
+(lib.CachedBmp_647 = function() {
 	this.initialize(ss["game_atlas_3"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_518 = function() {
+(lib.CachedBmp_646 = function() {
 	this.initialize(ss["game_atlas_4"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_517 = function() {
+(lib.CachedBmp_645 = function() {
 	this.initialize(ss["game_atlas_4"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_516 = function() {
+(lib.CachedBmp_644 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(40);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_515 = function() {
+(lib.CachedBmp_643 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(41);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_514 = function() {
+(lib.CachedBmp_642 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(42);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_513 = function() {
+(lib.CachedBmp_641 = function() {
 	this.initialize(ss["game_atlas_11"]);
 	this.gotoAndStop(43);
 }).prototype = p = new cjs.Sprite();
@@ -516,10 +516,10 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1));
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_560();
+	this.instance = new lib.CachedBmp_688();
 	this.instance.setTransform(0,0,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_561();
+	this.instance_1 = new lib.CachedBmp_689();
 	this.instance_1.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},1).wait(1));
@@ -542,7 +542,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_576();
+	this.instance = new lib.CachedBmp_704();
 	this.instance.setTransform(-5.5,-3.55,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -575,10 +575,10 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1));
 
 	// soundOff_ai
-	this.instance = new lib.CachedBmp_563();
+	this.instance = new lib.CachedBmp_691();
 	this.instance.setTransform(0,0,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_564();
+	this.instance_1 = new lib.CachedBmp_692();
 	this.instance_1.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},1).wait(1));
@@ -624,7 +624,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_554();
+	this.instance = new lib.CachedBmp_682();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -646,7 +646,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_559();
+	this.instance = new lib.CachedBmp_687();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -737,7 +737,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_550();
+	this.instance = new lib.CachedBmp_678();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -759,7 +759,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_549();
+	this.instance = new lib.CachedBmp_677();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -804,7 +804,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// tower_ai
-	this.instance = new lib.CachedBmp_540();
+	this.instance = new lib.CachedBmp_668();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -860,7 +860,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// redMark_ai
-	this.instance = new lib.CachedBmp_534();
+	this.instance = new lib.CachedBmp_662();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -882,7 +882,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// greenMark_ai
-	this.instance = new lib.CachedBmp_533();
+	this.instance = new lib.CachedBmp_661();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -904,7 +904,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// hangarLeftBottom_ai
-	this.instance = new lib.CachedBmp_532();
+	this.instance = new lib.CachedBmp_660();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -926,7 +926,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// background_ai
-	this.instance = new lib.CachedBmp_531();
+	this.instance = new lib.CachedBmp_659();
 	this.instance.setTransform(-0.05,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -948,7 +948,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Side_low_2_ai
-	this.instance = new lib.CachedBmp_530();
+	this.instance = new lib.CachedBmp_658();
 	this.instance.setTransform(0,0,0.187,0.187);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -971,7 +971,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Side_low_1_ai
-	this.instance = new lib.CachedBmp_529();
+	this.instance = new lib.CachedBmp_657();
 	this.instance.setTransform(0,0,0.1947,0.1947);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -994,7 +994,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Front_67_2_ai
-	this.instance = new lib.CachedBmp_528();
+	this.instance = new lib.CachedBmp_656();
 	this.instance.setTransform(0.05,0,0.2102,0.2102);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1017,7 +1017,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Front_67_1_ai
-	this.instance = new lib.CachedBmp_527();
+	this.instance = new lib.CachedBmp_655();
 	this.instance.setTransform(0,0,0.207,0.207);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1040,7 +1040,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Front_45_2_ai
-	this.instance = new lib.CachedBmp_526();
+	this.instance = new lib.CachedBmp_654();
 	this.instance.setTransform(0,0,0.2049,0.2049);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1063,7 +1063,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Front_45_1_ai
-	this.instance = new lib.CachedBmp_525();
+	this.instance = new lib.CachedBmp_653();
 	this.instance.setTransform(0,0,0.1816,0.1816);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1086,7 +1086,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Front_22_2_ai
-	this.instance = new lib.CachedBmp_524();
+	this.instance = new lib.CachedBmp_652();
 	this.instance.setTransform(0,0,0.1907,0.1907);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1109,7 +1109,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Front_22_1_ai
-	this.instance = new lib.CachedBmp_523();
+	this.instance = new lib.CachedBmp_651();
 	this.instance.setTransform(0,0.05,0.1799,0.1799);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1132,7 +1132,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Front_2_ai
-	this.instance = new lib.CachedBmp_522();
+	this.instance = new lib.CachedBmp_650();
 	this.instance.setTransform(0,0,0.1883,0.1883);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1155,7 +1155,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Front_1_ai
-	this.instance = new lib.CachedBmp_521();
+	this.instance = new lib.CachedBmp_649();
 	this.instance.setTransform(0,0,0.2004,0.2004);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1178,7 +1178,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Back_45_2_ai
-	this.instance = new lib.CachedBmp_520();
+	this.instance = new lib.CachedBmp_648();
 	this.instance.setTransform(0,0,0.1915,0.1915);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1201,7 +1201,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Back_45_1_ai
-	this.instance = new lib.CachedBmp_519();
+	this.instance = new lib.CachedBmp_647();
 	this.instance.setTransform(0,0.05,0.2021,0.2021);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1224,7 +1224,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Back_22_2_ai
-	this.instance = new lib.CachedBmp_518();
+	this.instance = new lib.CachedBmp_646();
 	this.instance.setTransform(0,0,0.1967,0.1967);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1247,7 +1247,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Back_22_1_ai
-	this.instance = new lib.CachedBmp_517();
+	this.instance = new lib.CachedBmp_645();
 	this.instance.setTransform(0,0,0.1926,0.1926);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1270,7 +1270,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Side_High_2_ai
-	this.instance = new lib.CachedBmp_516();
+	this.instance = new lib.CachedBmp_644();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1293,7 +1293,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Side_High_1_ai
-	this.instance = new lib.CachedBmp_515();
+	this.instance = new lib.CachedBmp_643();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1316,7 +1316,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_581();
+	this.instance = new lib.CachedBmp_709();
 	this.instance.setTransform(25.15,23.7,0.5,0.5);
 
 	this.level1 = new lib.speedThrottle();
@@ -1354,28 +1354,28 @@ if (reversed == null) { reversed = false; }
 	this.continueBtn.name = "continueBtn";
 	this.continueBtn.setTransform(241.05,349,1,1,0,0,0,71.9,24.2);
 
-	this.instance = new lib.CachedBmp_575();
+	this.instance = new lib.CachedBmp_703();
 	this.instance.setTransform(208.3,208.6,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_574();
+	this.instance_1 = new lib.CachedBmp_702();
 	this.instance_1.setTransform(324.55,321.65,0.5,0.5);
 
-	this.instance_2 = new lib.CachedBmp_573();
+	this.instance_2 = new lib.CachedBmp_701();
 	this.instance_2.setTransform(188.3,270.55,0.5,0.5);
 
-	this.instance_3 = new lib.CachedBmp_572();
+	this.instance_3 = new lib.CachedBmp_700();
 	this.instance_3.setTransform(106.25,230.45,0.5,0.5);
 
-	this.instance_4 = new lib.CachedBmp_571();
+	this.instance_4 = new lib.CachedBmp_699();
 	this.instance_4.setTransform(81.55,139.85,0.5,0.5);
 
-	this.instance_5 = new lib.CachedBmp_570();
+	this.instance_5 = new lib.CachedBmp_698();
 	this.instance_5.setTransform(166.5,24.15,0.5,0.5);
 
-	this.instance_6 = new lib.CachedBmp_569();
+	this.instance_6 = new lib.CachedBmp_697();
 	this.instance_6.setTransform(351.2,40.55,0.5,0.5);
 
-	this.instance_7 = new lib.CachedBmp_582();
+	this.instance_7 = new lib.CachedBmp_710();
 	this.instance_7.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_7},{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.continueBtn}]}).wait(1));
@@ -1397,28 +1397,28 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// login_ai
-	this.gameChoice2 = new lib.gameChoice();
-	this.gameChoice2.name = "gameChoice2";
-	this.gameChoice2.setTransform(270,214.7,1,1,0,0,0,49.6,11.2);
-
 	this.gameChoice1 = new lib.gameChoice();
 	this.gameChoice1.name = "gameChoice1";
-	this.gameChoice1.setTransform(270,182.65,1,1,0,0,0,49.6,11.2);
+	this.gameChoice1.setTransform(270,214.7,1,1,0,0,0,49.6,11.2);
+
+	this.gameChoice0 = new lib.gameChoice();
+	this.gameChoice0.name = "gameChoice0";
+	this.gameChoice0.setTransform(270,182.65,1,1,0,0,0,49.6,11.2);
 
 	this.startBtn = new lib.startBtn();
 	this.startBtn.name = "startBtn";
 	this.startBtn.setTransform(273.95,283.8,1,1,0,0,0,49.1,16.6);
 
-	this.instance = new lib.CachedBmp_567();
+	this.instance = new lib.CachedBmp_695();
 	this.instance.setTransform(229.4,135.75,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_566();
+	this.instance_1 = new lib.CachedBmp_694();
 	this.instance_1.setTransform(86.9,0.05,0.5,0.5);
 
-	this.instance_2 = new lib.CachedBmp_565();
+	this.instance_2 = new lib.CachedBmp_693();
 	this.instance_2.setTransform(0,0,0.5,0.5);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.startBtn},{t:this.gameChoice1},{t:this.gameChoice2}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.startBtn},{t:this.gameChoice0},{t:this.gameChoice1}]}).wait(1));
 
 	this._renderFirstFrame();
 
@@ -1460,10 +1460,10 @@ if (reversed == null) { reversed = false; }
 	this.pauseBtn.name = "pauseBtn";
 	this.pauseBtn.setTransform(160.2,21.05,1,1,0,0,0,12,12);
 
-	this.instance = new lib.CachedBmp_558();
+	this.instance = new lib.CachedBmp_686();
 	this.instance.setTransform(135.7,0,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_557();
+	this.instance_1 = new lib.CachedBmp_685();
 	this.instance_1.setTransform(4,22.65,0.5,0.5);
 
 	this.instructionsText = new cjs.Text("תוארוה", "18px 'Alef'", "#231F20");
@@ -1473,10 +1473,10 @@ if (reversed == null) { reversed = false; }
 	this.instructionsText.parent = this;
 	this.instructionsText.setTransform(165,101.4);
 
-	this.instance_2 = new lib.CachedBmp_556();
+	this.instance_2 = new lib.CachedBmp_684();
 	this.instance_2.setTransform(170.3,38.8,0.5,0.5);
 
-	this.instance_3 = new lib.CachedBmp_555();
+	this.instance_3 = new lib.CachedBmp_683();
 	this.instance_3.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_3},{t:this.instance_2},{t:this.instructionsText},{t:this.instance_1},{t:this.instance},{t:this.pauseBtn},{t:this.startBtn},{t:this.speedBtn},{t:this.progress},{t:this.soundBtn}]}).wait(1));
@@ -1506,7 +1506,7 @@ if (reversed == null) { reversed = false; }
 	this.endBtn.name = "endBtn";
 	this.endBtn.setTransform(358.85,539.45,1,1,0,0,0,40.4,16.6);
 
-	this.instance = new lib.CachedBmp_553();
+	this.instance = new lib.CachedBmp_681();
 	this.instance.setTransform(27.35,162.2,0.5,0.5);
 
 	this.totalMisses = new cjs.Text("2", "23px 'Abraham'", "#FDD837");
@@ -1530,10 +1530,10 @@ if (reversed == null) { reversed = false; }
 	this.finalScore.parent = this;
 	this.finalScore.setTransform(431.15,57.75);
 
-	this.instance_1 = new lib.CachedBmp_552();
+	this.instance_1 = new lib.CachedBmp_680();
 	this.instance_1.setTransform(94.15,80.95,0.5,0.5);
 
-	this.instance_2 = new lib.CachedBmp_580();
+	this.instance_2 = new lib.CachedBmp_708();
 	this.instance_2.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.finalScore},{t:this.totalTime},{t:this.totalMisses},{t:this.instance},{t:this.endBtn},{t:this.playAgainBtn}]}).wait(1));
@@ -1559,28 +1559,28 @@ if (reversed == null) { reversed = false; }
 	this.continueBtn.name = "continueBtn";
 	this.continueBtn.setTransform(228.7,373.6,1,1,0,0,0,71.9,24.2);
 
-	this.instance = new lib.CachedBmp_575();
+	this.instance = new lib.CachedBmp_703();
 	this.instance.setTransform(211.4,264.1,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_547();
+	this.instance_1 = new lib.CachedBmp_675();
 	this.instance_1.setTransform(306.25,345.4,0.5,0.5);
 
-	this.instance_2 = new lib.CachedBmp_546();
+	this.instance_2 = new lib.CachedBmp_674();
 	this.instance_2.setTransform(167.55,289.1,0.5,0.5);
 
-	this.instance_3 = new lib.CachedBmp_545();
+	this.instance_3 = new lib.CachedBmp_673();
 	this.instance_3.setTransform(123.05,184.5,0.5,0.5);
 
-	this.instance_4 = new lib.CachedBmp_544();
+	this.instance_4 = new lib.CachedBmp_672();
 	this.instance_4.setTransform(233.2,142.55,0.5,0.5);
 
-	this.instance_5 = new lib.CachedBmp_543();
+	this.instance_5 = new lib.CachedBmp_671();
 	this.instance_5.setTransform(166.5,24.15,0.5,0.5);
 
-	this.instance_6 = new lib.CachedBmp_542();
+	this.instance_6 = new lib.CachedBmp_670();
 	this.instance_6.setTransform(351.2,40.55,0.5,0.5);
 
-	this.instance_7 = new lib.CachedBmp_579();
+	this.instance_7 = new lib.CachedBmp_707();
 	this.instance_7.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_7},{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.continueBtn}]}).wait(1));
@@ -1616,25 +1616,25 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
 
 	// signLeftTop_ai
-	this.instance = new lib.CachedBmp_535();
+	this.instance = new lib.CachedBmp_663();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.instance_1 = new lib.greenMarkai();
 	this.instance_1.setTransform(159.55,54.95,1,1,0,0,0,11.7,11.8);
 
-	this.instance_2 = new lib.CachedBmp_537();
+	this.instance_2 = new lib.CachedBmp_665();
 	this.instance_2.setTransform(38.95,-3,0.5,0.5);
 
-	this.instance_3 = new lib.CachedBmp_577();
+	this.instance_3 = new lib.CachedBmp_705();
 	this.instance_3.setTransform(0,70.6,0.5,0.5);
 
 	this.instance_4 = new lib.redMarkai();
 	this.instance_4.setTransform(159.55,54.85,1,1,0,0,0,11.7,11.7);
 
-	this.instance_5 = new lib.CachedBmp_539();
+	this.instance_5 = new lib.CachedBmp_667();
 	this.instance_5.setTransform(38.95,-3,0.5,0.5);
 
-	this.instance_6 = new lib.CachedBmp_578();
+	this.instance_6 = new lib.CachedBmp_706();
 	this.instance_6.setTransform(0,70.6,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_3},{t:this.instance_2},{t:this.instance_1}]},1).to({state:[{t:this.instance_6},{t:this.instance_5},{t:this.instance_4}]},1).wait(1));
@@ -1937,13 +1937,13 @@ if (reversed == null) { reversed = false; }
 	this.instance = new lib.SideHigh_1ai("synched",0);
 	this.instance.setTransform(110.55,80.5,0.5334,0.5334,0,0,0,207.2,99.9);
 
-	this.instance_1 = new lib.CachedBmp_513();
+	this.instance_1 = new lib.CachedBmp_641();
 	this.instance_1.setTransform(214.25,0,0.5,0.5);
 
 	this.instance_2 = new lib.SideHigh_2ai("synched",0);
 	this.instance_2.setTransform(200.1,122.75,0.5523,0.5522,0,0,0,362.3,173);
 
-	this.instance_3 = new lib.CachedBmp_514();
+	this.instance_3 = new lib.CachedBmp_642();
 	this.instance_3.setTransform(214.25,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).to({state:[{t:this.instance_3},{t:this.instance_2}]},1).wait(1));
@@ -1979,13 +1979,6 @@ if (reversed == null) { reversed = false; }
 		var self = this;
 		stage.enableMouseOver();
 		
-		// =+=+=+=+=+=+=+=+=+=+=+
-		// Notes
-		// =+=+=+=+=+=+=+=+=+=+=+
-		
-		// display game board with fade in
-		// exit btn when pause
-		
 		// ====================================
 		// Create Objects and Define Positions
 		// ====================================
@@ -2009,16 +2002,16 @@ if (reversed == null) { reversed = false; }
 		backgroundSound.stop();
 		
 		// create plane and define position
-		var Plane = new lib.Plane();
-		stage.addChild(Plane);
-		Plane.x = 1280;
-		Plane.y = 200;
+		var plane = new lib.Plane();
+		stage.addChild(plane);
+		plane.x = 1280;
+		plane.y = 200;
 		
 		//add plane text
 		var planeText = new createjs.Text();
 		planeText.font = "16px Abraham";
 		planeText.color = "black";
-		Plane.addChild(planeText);
+		plane.addChild(planeText);
 		planeText.x = 357;
 		planeText.y = 30;
 		planeText.lineWidth = 195;
@@ -2032,11 +2025,11 @@ if (reversed == null) { reversed = false; }
 		airplaneApproach.gotoAndStop(0);
 		airplaneApproach.visible = false;
 		
-		// create Tower 
-		var Tower = new lib.Tower();
-		stage.addChild(Tower);
-		Tower.x = 33;
-		Tower.y = 28;
+		// create tower 
+		var tower = new lib.Tower();
+		stage.addChild(tower);
+		tower.x = 33;
+		tower.y = 28;
 		
 		// create feeback bubble
 		var inspectorFeedback = new lib.feedbackBubble();
@@ -2124,14 +2117,7 @@ if (reversed == null) { reversed = false; }
 		instructions.instructionsText.font = "16px Alef"
 		
 		// start botton
-		instructions.startBtn.addEventListener("click", function(event){
-			event.currentTarget.visible = false;
-			if(instructions.soundBtn.currentFrame == 0) {
-				backgroundSound.play();
-				backgroundSound.volume = 0.05;
-			}
-			startNewQuestion();
-		});
+		instructions.startBtn.addEventListener("click", instructionsStartBtn);
 		instructions.startBtn.cursor = "pointer";
 		
 		// speed levels
@@ -2150,7 +2136,6 @@ if (reversed == null) { reversed = false; }
 		}
 		speedLevels[0].alpha = 1;
 		
-		
 		// pause button
 		instructions.pauseBtn.addEventListener("click", pauseGame);
 		instructions.pauseBtn.cursor = "pointer";
@@ -2168,48 +2153,18 @@ if (reversed == null) { reversed = false; }
 		// login start botton
 		login.startBtn.addEventListener("click", initializeGame);
 		login.startBtn.gotoAndStop(1);
-		// game choice text
-		var selectedGame = null;
 		// first btn
-		login.gameChoice1.cursor = "pointer";
-		login.gameChoice1.btnText.text = 'גיאוגרפיה';
-		login.gameChoice1.addEventListener('mouseover', function(event){ 
-			if ( selectedGame != 0 ) {
-				event.currentTarget.gotoAndStop(1);
-			}
-		})
-		login.gameChoice1.addEventListener('mouseout', function(event){
-			if ( selectedGame != 0 ) {
-				event.currentTarget.gotoAndStop(0);
-			}  
-		});
-		login.gameChoice1.addEventListener('click', function(event){ 
-			event.currentTarget.gotoAndStop(2); 
-			login.gameChoice2.gotoAndStop(0);
-			login.startBtn.cursor = "pointer";
-			login.startBtn.gotoAndStop(0);
-			selectedGame = 0;
-		});
+		login.gameChoice0.cursor = "pointer";
+		login.gameChoice0.btnText.text = 'גיאוגרפיה';
+		login.gameChoice0.addEventListener('mouseover', mouseOverGameChoice);
+		login.gameChoice0.addEventListener('mouseout', mouseOutGameChoice);
+		login.gameChoice0.addEventListener('click', clickGameChoice);
 		// second btn
-		login.gameChoice2.cursor = "pointer";
-		login.gameChoice2.btnText.text = 'חשבון';
-		login.gameChoice2.addEventListener('mouseover', function(event){ 
-			if ( selectedGame != 1){
-				event.currentTarget.gotoAndStop(1);
-			}
-		 });
-		login.gameChoice2.addEventListener('mouseout', function(event){ 
-			if ( selectedGame != 1 ){
-				event.currentTarget.gotoAndStop(0);
-			} 
-		});
-		login.gameChoice2.addEventListener('click', function(event){ 
-			event.currentTarget.gotoAndStop(2); 
-			login.gameChoice1.gotoAndStop(0);
-			login.startBtn.cursor = "pointer";
-			login.startBtn.gotoAndStop(0);
-			selectedGame = 1;
-		});
+		login.gameChoice1.cursor = "pointer";
+		login.gameChoice1.btnText.text = 'חשבון';
+		login.gameChoice1.addEventListener('mouseover', mouseOverGameChoice);
+		login.gameChoice1.addEventListener('mouseout', mouseOutGameChoice);
+		login.gameChoice1.addEventListener('click', clickGameChoice);
 		
 		// create delay message
 		var delayMsg = new lib.delayMsg();
@@ -2244,31 +2199,32 @@ if (reversed == null) { reversed = false; }
 		scoreWindow.playAgainBtn.addEventListener('click', initializeGame);
 		scoreWindow.playAgainBtn.cursor = 'pointer';
 		
-		// array for storing score table in order to be able to delete them at restart
-		var scoreWinEl = [];
-		
 		// ====================================
 		// Define Variables
 		// ====================================
+		
+		// define constants
+		const PLANE_FLY_OUT_SPEED = 17;
+		const PLANE_X_ANSWER_START = 930;
+		const PLANE_X_ANSWER_END = -180;
 		
 		// plane speed variables
 		var currentSpeed = 0;
 		var speeds = [3, 7, 9];
 		var planeSpeed = speeds[currentSpeed];
-		const PLANE_FLY_OUT_SPEED = 17;
 		
 		// current question and answer
 		var currentQues = null;
 		var currentAns = null;
 		var currentQuesStartTime = null;
-		const PLANE_X_ANSWER_START = 930;
-		const PLANE_X_ANSWER_END = -180;
 		
-		// ?
+		// define game variables
+		var selectedGame = null;
 		var unansweredQuestions = null;
 		var lastQuestion = null;
 		var countMultiMiss = 0;
-		var planeInterval; // global variable for handling plane fly interval
+		var planeInterval; 				// global variable for handling plane fly interval
+		var scoreWinEl = [];			// stores score table elements in order to be able to delete them at restart
 		
 		// define database
 		var database = [ 
@@ -2337,55 +2293,50 @@ if (reversed == null) { reversed = false; }
 		}
 		];
 		
-		// database builder
-		var QuesItemArray = [];
-		var CategoryArray = [];
-		
-		// image loader
-		// var image = new Image();
-		// image.onload = handleImageLoad;
-		
-		// image testing
+		// current game database
+		var quesItemArray = [];
+		var categoryArray = [];
 		var bitmaps = [];
 		
 		// ====================================
 		// Define Functions
 		// ====================================
 		
-		// play new game
+		// play new game(login window)
 		function playGame(){
-		
 			// hide score (if displayed)
 			scoreWindow.visible = false;
 		
-			// reset tower index
-			stage.setChildIndex( Tower, 4);
+			// reset tower display index
+			stage.setChildIndex( tower, 4);
 			stage.setChildIndex( inspectorFeedback, 6);
+			// hide inspector feedback
 			inspectorFeedback.visible = false;
 		
-			// login window
+			// show login window
 			selectedGame = null;
 			blackScreen.visible = true;
 			login.visible = true;
+			login.startBtn.gotoAndStop(1);
+			login.startBtn.cursor = "default";
+			login.gameChoice0.gotoAndStop(0);
 			login.gameChoice1.gotoAndStop(0);
-			login.gameChoice2.gotoAndStop(0);
 		}
 		
 		// initialize game
 		function initializeGame() {
 			if ( selectedGame !=  null) {	// user selected a game
 				// selected game database builder
-				CategoryArray = [];
+				categoryArray = [];
 				for (var i=0; i<database[selectedGame].categories.length; i++) {
-					CategoryArray.push({
+					categoryArray.push({
 						name: database[selectedGame].categories[i],
-						animation: "planeLand-"+i
 					});
 				}
-				QuesItemArray=[];
+				quesItemArray=[];
 				bitmaps = [];
 				for (var i=0; i<database[selectedGame].questions.length; i++){
-					QuesItemArray.push({
+					quesItemArray.push({
 						name: database[selectedGame].questions[i].content,
 						answer: database[selectedGame].questions[i].answer,
 						description: database[selectedGame].questions[i].description,
@@ -2394,9 +2345,11 @@ if (reversed == null) { reversed = false; }
 						status: false,
 						time: null
 					});
-					if ( database[selectedGame].questions[i].type == 'img' ) { // image
+					// image qusetion
+					if ( database[selectedGame].questions[i].type == 'img' ) {
+						// create new image, onload store image to bitmaps as a bitmap
 						var image = new Image();
-						image.onload = storeImgToPlane;
+						image.onload = storeImgToplane;
 						image.alt = i;
 						image.src = 'flags/'+database[selectedGame].questions[i].content;
 					}
@@ -2414,7 +2367,7 @@ if (reversed == null) { reversed = false; }
 				planeText.text = '';
 		
 				// reset signs
-				for (var i=0; i<CategoryArray.length; i++){
+				for (var i=0; i<categoryArray.length; i++){
 					signs[i].getChildByName('signText').text = "";
 		
 				}
@@ -2427,11 +2380,12 @@ if (reversed == null) { reversed = false; }
 				instructions.startBtn.visible = true;
 				instructions.soundBtn.gotoAndStop(0);
 				instructions.instructionsText.text = database[selectedGame].instructionsText;
+				// reset speed level to low
 				speedLevels[0].alpha = 1;
 				speedLevels[1].alpha = 0.1;
 				speedLevels[2].alpha = 0.1;
 				// reset tower index
-				stage.setChildIndex( Tower, 4);
+				stage.setChildIndex( tower, 4);
 				stage.setChildIndex( inspectorFeedback, 6);
 				inspectorFeedback.visible = false;
 				// clear score window
@@ -2439,35 +2393,31 @@ if (reversed == null) { reversed = false; }
 				scoreWinEl = [];
 		
 				// update signs
-				for (var i=0; i<CategoryArray.length; i++){
+				for (var i=0; i<categoryArray.length; i++){
 					hangars[i].visible = true;
 					signs[i].visible = true;
 				}
-				unansweredQuestions = QuesItemArray.length;
-				instructions.progress.text = (QuesItemArray.length-unansweredQuestions)+'/'+QuesItemArray.length;
+				unansweredQuestions = quesItemArray.length;
+				instructions.progress.text = (quesItemArray.length-unansweredQuestions)+'/'+quesItemArray.length;
 			}
 		}
 		
 		// start a new question
 		function startNewQuestion() {
+			// plane didn't pass more than 3 times in a row
 			if (countMultiMiss < 3){
-				blackScreen.visible = false;
 				// reset signs feedback
 				signs.forEach( (sign) => { sign.gotoAndStop(0); } );
-				
-				// update signs
-				for (var i=0; i<CategoryArray.length; i++){
-					signs[i].getChildByName('signText').text = CategoryArray[i].name;
-					signs[i].getChildByName('signText').y = 35 - signs[i].getChildByName('signText').getMeasuredHeight()/2;
-				}
 				// reset feedback
 				inspectorFeedback.visible = false;
 		
 				lastQuestion = currentQues;
 				currentQues = randomQuestion(); // pick a random question
 				if (currentQues != null ) { 	// there is a non-answered question
-					if ( QuesItemArray[currentQues].type == 'text') {
-						planeText.text = QuesItemArray[currentQues].name;
+					if ( quesItemArray[currentQues].type == 'text') {	// question type text
+						// update plane text
+						planeText.text = quesItemArray[currentQues].name;
+						// adjust font size depends on text length
 						if ( planeText.text.length < 20 ) {
 							planeText.font = "25px Alef";
 						} else if ( planeText.text.length < 36 ) {
@@ -2475,30 +2425,31 @@ if (reversed == null) { reversed = false; }
 						} else {
 							planeText.font = "18px Alef";
 						}
+						// adjust text position
 						planeText.y = 50 -  planeText.getMeasuredHeight()/2;
 					}
-					else {
-						planeText.text = '';
+					else {												// question type text
+						planeText.text = '';	// clear text
+						// find current question bitmap, add it to plane
 						bitmapsIndex = bitmaps.findIndex( (bmp) => { return bmp.question == currentQues; });
-						Plane.addChild(bitmaps[bitmapsIndex].bitmap);
+						plane.addChild(bitmaps[bitmapsIndex].bitmap);
 		        	}
 		
+					// update variables
 					currentAns = null;
 					planeSpeed = speeds[currentSpeed]; // reset plane speed to user choice
-					startPlaneFly();
-					if(instructions.soundBtn.currentFrame == 0) {
-						flySound.play();
-					}
-					else {
-						flySound.stop();
-					}
 					currentQuesStartTime = null;
+					startPlaneFly();
+					// play sound (if not muted)
+					if ( instructions.soundBtn.currentFrame == 0 ) 	{	flySound.play();	}
+					else 											{	flySound.stop();	}
 				} 
 				else { 							// no more question
-					console.log("Game Ended");
+					// plat game over sound
 					if(instructions.soundBtn.currentFrame == 0) {
 						gameOverSound.play();
 					}
+					// show score window
 					showScore();
 				}
 			}
@@ -2511,36 +2462,33 @@ if (reversed == null) { reversed = false; }
 		// checks the answer of the sign clicked
 		function checkAnswer(event) {
 			if (currentAns == null && 				// if user didn't answer current question yet
-				PLANE_X_ANSWER_START > Plane.x &&	// and plane is at available range
-				PLANE_X_ANSWER_END < Plane.x		){	 
+				PLANE_X_ANSWER_START > plane.x &&	// plane is at available answer range
+				PLANE_X_ANSWER_END < plane.x		){	 
+				// get clicked sign name (num)
 				currentAns = parseInt(event.currentTarget.name.charAt(4));
-				if (QuesItemArray[currentQues].answer == currentAns){	// correct answer
+				if (quesItemArray[currentQues].answer == currentAns){	// correct answer
 					// calculate question time
 					var currentAnsTime = new Date();
-					QuesItemArray[currentQues].time = (currentAnsTime.getTime() - currentQuesStartTime.getTime())/1000;
-					console.log('current ques time: '+QuesItemArray[currentQues].time);
-		
-					QuesItemArray[currentQues].status = true;
+					quesItemArray[currentQues].time = (currentAnsTime.getTime() - currentQuesStartTime.getTime())/1000;
+					// update variables
+					quesItemArray[currentQues].status = true;
 					unansweredQuestions--;
-					console.log ("Yessssssssssssss!!");
 		
 					// green feedback
 					event.currentTarget.gotoAndStop(1);
 					inspectorFeedback.visible = true;
 					var msg = ',כל הכבוד\n'
 							+ 'עזרת לי להנחית מטוס '
-							+ (QuesItemArray.length-unansweredQuestions)
+							+ (quesItemArray.length-unansweredQuestions)
 							+ ' מתוך '
-							+ QuesItemArray.length;
+							+ quesItemArray.length;
 					inspectorFeedback.feedbackText.text = msg;
-					instructions.progress.text = (QuesItemArray.length-unansweredQuestions)+'/'+QuesItemArray.length;
+					instructions.progress.text = (quesItemArray.length-unansweredQuestions)+'/'+quesItemArray.length;
 					if(instructions.soundBtn.currentFrame == 0) {
 						goodJobSound.play();
 					}
 				}
 				else{													// wrong answer
-					console.log ("nooooooooo");
-		
 					// red feedback
 					event.currentTarget.gotoAndStop(2);
 					inspectorFeedback.visible = true;
@@ -2556,55 +2504,58 @@ if (reversed == null) { reversed = false; }
 				}
 				// speed up plane
 				planeSpeed = PLANE_FLY_OUT_SPEED;
-				console.log('speedUp');
 		
-				// add try count
-				QuesItemArray[currentQues].try++;
+				// update tries count
+				quesItemArray[currentQues].try++;
 				countMultiMiss = 0;
 			}
 		}
 		
-		// start plane flying
+		// start plane flying (interval)
 		function startPlaneFly(){
-			Plane.x = 1280;
+			plane.x = 1280;
 			planeInterval = setInterval( planeMoveOneStep ,1000/24);
 		}
 		
-		// stop plane flying
+		// stop plane flying (interval)
 		function stopPlaneFly(){
 			clearInterval(planeInterval);
 		}
 		
-		// plane one step movment
+		// plane one step movement
 		function planeMoveOneStep(){
-			Plane.x = Plane.x - planeSpeed;
+			// update plane position
+			plane.x = plane.x - planeSpeed;
 			// fadein sound
-			if ( Plane.x > PLANE_X_ANSWER_START ) {
+			if ( plane.x > PLANE_X_ANSWER_START ) {
 				var fadeInDistance = 1280 - PLANE_X_ANSWER_START;
-				var passedDistance = 1280 - Plane.x;
+				var passedDistance = 1280 - plane.x;
 				flySound.volume = 0.5*(passedDistance/fadeInDistance);
 			}
-			// set question start time
-			if ( Plane.x < PLANE_X_ANSWER_START && currentQuesStartTime == null ) { // plane passed the start point
-				currentQuesStartTime = new Date();
-			}
 			// fadeout sound
-			if ( Plane.x < PLANE_X_ANSWER_END ) {
+			if ( plane.x < PLANE_X_ANSWER_END ) {
 				var fadeOutDistance = PLANE_X_ANSWER_END - (-474) ;
-				var remainingDistance = Plane.x - (-474);
+				var remainingDistance = plane.x - (-474);
 				flySound.volume = 0.5*(remainingDistance/fadeOutDistance);
 			}
-			if ( Plane.x <= -474 ) { // plane arrived to the edge
+			// set question start time
+			if ( plane.x < PLANE_X_ANSWER_START && currentQuesStartTime == null ) { // plane passed the start point
+				currentQuesStartTime = new Date();
+			}
+		
+			// plane arrived to the edge - stop plane, play next funtions
+			if ( plane.x <= -474 ) {
 				flySound.stop();
-				stopPlaneFly();
+				stopPlaneFly();		// stop interval
+				
 				// remove img if exists
-				var img = Plane.getChildByName('img');
+				var img = plane.getChildByName('img');
 				if (img != null ) {
-					Plane.removeChild(img);
+					plane.removeChild(img);
 				}
 		
 				if ( currentAns!= null ) {										// user answered current question
-					if ( QuesItemArray[currentQues].answer == currentAns){		// correct answer
+					if ( quesItemArray[currentQues].answer == currentAns){		// correct answer
 						// set landing direction
 						switch (currentAns){
 							case 0: 
@@ -2627,8 +2578,6 @@ if (reversed == null) { reversed = false; }
 						airplaneApproach.visible = true;
 						airplaneApproach.gotoAndPlay(0);
 						airplaneApproach.addEventListener("tick", lastApproachFrame);
-						
-						// starts new question at plane landing last frame listener
 					}
 					else {														// wrong answer
 						startNewQuestion();
@@ -2636,8 +2585,7 @@ if (reversed == null) { reversed = false; }
 				}
 				else {															// user didn't answer current question
 					countMultiMiss++;
-					console.log('countMultiMiss: '+countMultiMiss);
-					QuesItemArray[currentQues].try++;
+					quesItemArray[currentQues].try++;
 					startNewQuestion();
 				}
 			}
@@ -2645,7 +2593,7 @@ if (reversed == null) { reversed = false; }
 		
 		// plane approach last frame listener
 		function lastApproachFrame(){ 
-			if (airplaneApproach.currentFrame == 30 ) {
+			if (airplaneApproach.currentFrame == 30 ) {		// 30 is the last frame
 				// stop approach
 				airplaneApproach.gotoAndStop(0);
 				airplaneApproach.visible = false;
@@ -2662,7 +2610,7 @@ if (reversed == null) { reversed = false; }
 		
 		// plane landing last frame listener
 		function lastlandingFrame(){ 
-			if (landing.currentFrame == 142 ) {
+			if (landing.currentFrame == 142 ) {		// 142 is the last frame
 				// stop landing
 				landing.gotoAndStop(0);
 				landing.visible = false;
@@ -2680,29 +2628,12 @@ if (reversed == null) { reversed = false; }
 			}
 		}
 		
-		// change speed to num (0, 1 or 2)
-		function changeSpeed(event){
-			var num = parseInt(event.currentTarget.name.charAt(5));
-			// check if new speed isn't same as current speed 
-			if ( num != currentSpeed) {
-				// change old speed alpha
-				speedLevels[currentSpeed].alpha = 0.1;
-				currentSpeed = num;
-				// change new speed alpha
-				speedLevels[currentSpeed].alpha = 1;
-				// change speed if plane is not at fly out
-				if ( planeSpeed != PLANE_FLY_OUT_SPEED ){
-					planeSpeed = speeds[currentSpeed];
-				}
-			} 
-		}
-		
-		// pick a random question
+		// picks a random question
 		function randomQuestion(){
 			var remainingQuestions = [];
 			// collect remaining questions
-			for (var i=0; i<QuesItemArray.length; i++){
-				if ( !QuesItemArray[i].status ) {
+			for (var i=0; i<quesItemArray.length; i++){
+				if ( !quesItemArray[i].status ) {
 					remainingQuestions.push(i);
 				}
 			}
@@ -2724,31 +2655,32 @@ if (reversed == null) { reversed = false; }
 			}
 		}
 		
-		// prints the score to console
+		// shows score window
 		function showScore() {
+			// calculates max time for a question, min time to full score
 			var maxTime = (PLANE_X_ANSWER_START-PLANE_X_ANSWER_END)/(24*speeds[0]);
 			var minTime = 0.3*maxTime;
 		
 			var totalTime = 0;
 			var totalMisses = 0;
 			var finalScore = 0;
-			var quesCountPerCat = [];
-			CategoryArray.forEach( () => { quesCountPerCat.push(0); } );
+			var categoryCounter = [];
+			categoryArray.forEach( () => { categoryCounter.push(0); } ); // [ 0, 0, 0, 0 ]
 		
-			for (var i=0; i<QuesItemArray.length; i++){
-				var currentTime = QuesItemArray[i].time;
-				var tScore = 100;
-				if ( currentTime > minTime ) {
+			for (var i=0; i<quesItemArray.length; i++){
+				var currentTime = quesItemArray[i].time;
+				var tScore = 100;					// full score
+				if ( currentTime > minTime ) {		// reduce points depends on current question time
 					tScore -= (((currentTime-minTime)/(maxTime-minTime)) * (100-80));
 				}
 		
-				// total
+				// add qustion to total
 				totalTime += currentTime;
-				totalMisses += (QuesItemArray[i].try - 1);
-				finalScore += ((tScore / QuesItemArray[i].try)/QuesItemArray.length);
+				totalMisses += (quesItemArray[i].try - 1);
+				finalScore += ((tScore / quesItemArray[i].try)/quesItemArray.length);
 				
 				// update category counter
-				quesCountPerCat[QuesItemArray[i].answer]++;
+				categoryCounter[quesItemArray[i].answer]++;
 			}
 		
 			// floor numbers
@@ -2759,7 +2691,7 @@ if (reversed == null) { reversed = false; }
 						':' +
 						(((totalTime%60)<10)?('0'+totalTime%60):totalTime%60);
 		
-			console.log("Total Time: "+totalTime+" Total Misses:"+totalMisses+" Final Score:"+finalScore);
+			// update score window
 			scoreWindow.finalScore.text = finalScore;
 			scoreWindow.totalTime.text = totalTimeStr;
 			scoreWindow.totalMisses.text = totalMisses;
@@ -2770,7 +2702,7 @@ if (reversed == null) { reversed = false; }
 			signs.forEach( (sign) => { sign.visible = false; });
 		
 			// show elements
-			stage.setChildIndex( Tower, stage.numChildren - 1);
+			stage.setChildIndex( tower, stage.numChildren - 1);
 			stage.setChildIndex( inspectorFeedback, stage.numChildren - 1);
 			inspectorFeedback.visible = true;
 			inspectorFeedback.feedbackText.text = 'הנחתת את כל המטוסים בהצלחה';
@@ -2779,22 +2711,25 @@ if (reversed == null) { reversed = false; }
 		
 			// find max category length
 			var maxCatLength = 0;
-			quesCountPerCat.forEach( (count) => { 
-				if ( count > maxCatLength) { 
-					maxCatLength = count; 
+			for (var i=0; i<categoryCounter.length; i++){
+				if ( categoryCounter[i] > maxCatLength) {
+					maxCatLength = categoryCounter[i]; 
 				} 
-			} );
+				// reset for further use
+				categoryCounter[i] = 0;
+			}
 		
+			// set position calculating measurments
 			var headerY = 114.25;
 			var tableX = 27.35;
 			var tableY = 162.2;
-			var colWidth = (530.25 / CategoryArray.length);
+			var colWidth = (530.25 / categoryArray.length);
 			var rowHeight = 327.9 / maxCatLength ;
-			var categoryCounter = [];
-			// create headers
-			for (var i=0; i<CategoryArray.length; i++){
+		
+			// create score headers
+			for (var i=0; i<categoryArray.length; i++){
 				var catHeader = new createjs.Text();
-				catHeader.text = CategoryArray[i].name;
+				catHeader.text = categoryArray[i].name;
 				catHeader.font = "20pt Abraham";
 				catHeader.color = "white";
 				catHeader.x = tableX + (colWidth*i) + (colWidth/2);
@@ -2802,59 +2737,56 @@ if (reversed == null) { reversed = false; }
 				catHeader.lineWidth = colWidth;
 				catHeader.textAlign = "center";
 				scoreWindow.addChild(catHeader);
-				scoreWinEl.push(catHeader);
-				categoryCounter.push(0);		
+				scoreWinEl.push(catHeader);	
 			}
 		
-			// create table
-			for (var i=0; i<QuesItemArray.length; i++){
-				if ( QuesItemArray[i].type == 'text' ) {
+			// create score table
+			for (var i=0; i<quesItemArray.length; i++){
+				if ( quesItemArray[i].type == 'text' ) {	// text question
 					var tableEl = new createjs.Text();
-					tableEl.text = QuesItemArray[i].description;
+					tableEl.text = quesItemArray[i].description;
 					tableEl.font = "15pt Alef";
-					tableEl.color = (QuesItemArray[i].try > 1)?"red":"black";
-					tableEl.x = tableX + (colWidth*QuesItemArray[i].answer) + (colWidth/2);
-					tableEl.y = tableY + (rowHeight*categoryCounter[QuesItemArray[i].answer]) + rowHeight*0.5;
+					tableEl.color = (quesItemArray[i].try > 1)?"red":"black";	// red color for extra tries
+					tableEl.x = tableX + (colWidth*quesItemArray[i].answer) + (colWidth/2);
+					tableEl.y = tableY + (rowHeight*categoryCounter[quesItemArray[i].answer]) + rowHeight*0.5;
 					tableEl.lineWidth = colWidth;
 					tableEl.textAlign = "center";
 					tableEl.y -= tableEl.getMeasuredHeight()/2;
 					scoreWindow.addChild(tableEl);
 					scoreWinEl.push(tableEl);
 				} 
-				else {
-					// image
-					var x = tableX + (colWidth*QuesItemArray[i].answer);
-					var y = tableY + (rowHeight*categoryCounter[QuesItemArray[i].answer]);
+				else {										// image question
+					var x = tableX + (colWidth*quesItemArray[i].answer);
+					var y = tableY + (rowHeight*categoryCounter[quesItemArray[i].answer]);
 					bitmapsIndex = bitmaps.findIndex( (bmp) => { return bmp.question == i; });
 					addBitmapToScore(bitmaps[bitmapsIndex].bitmap, x, y, colWidth, rowHeight);
-					if (QuesItemArray[i].try > 1) {		// if there are more than 1 try
+					// show red rectangle for extra tries
+					if (quesItemArray[i].try > 1) {		
 						var redRect = new lib.redRect();
 						redRect.x = x;
 						redRect.y = y;
-						var rectNewScaleX = colWidth / 176.75;
+						var rectNewScaleX = colWidth / 176.75;		// 176.75 symbol width
 						redRect.scaleX = rectNewScaleX;
-						var rectNewScaleY = rowHeight / 65.6;
+						var rectNewScaleY = rowHeight / 65.6;		// 65.6 symbol height
 						redRect.scaleY = rectNewScaleY;
 						scoreWindow.addChild(redRect);
 						scoreWinEl.push(redRect);
 					}
 				}
-				categoryCounter[QuesItemArray[i].answer]++;
+				categoryCounter[quesItemArray[i].answer]++;
 			}
 		}
 		
-		// show pause window
+		// shows pause window or delay msg
 		function pauseGame() {
 			// -- hide elements
 			// hide instructions
 			instructions.visible = false;
-			// stop background music
-			backgroundSound.stop();
 		
 			// -- hide plane
 			// plane is flying
 			stopPlaneFly();
-			Plane.x = 1280;
+			plane.x = 1280;
 			// plane is on approach
 			airplaneApproach.removeEventListener('tick', lastApproachFrame);
 			airplaneApproach.gotoAndStop(0);
@@ -2866,10 +2798,10 @@ if (reversed == null) { reversed = false; }
 			landing.scaleX = 1;
 			landing.scale = 1;
 			landing.y = 236.75;
-			// remove img if exists
-			var img = Plane.getChildByName('img');
+			// remove img on plane if exists
+			var img = plane.getChildByName('img');
 			if (img != null ) {
-				Plane.removeChild(img);
+				plane.removeChild(img);
 			}
 				
 			// hide text on signs
@@ -2881,6 +2813,7 @@ if (reversed == null) { reversed = false; }
 			inspectorFeedback.visible = false;
 		
 			// stop sound
+			backgroundSound.stop();
 			flySound.stop();
 		
 			// -- show elements
@@ -2898,7 +2831,6 @@ if (reversed == null) { reversed = false; }
 		
 		// resume game after pause or delay
 		function resumeGame() {
-			console.log('resumeGame');
 			// hide black screen
 			blackScreen.visible = false;
 			// play background music
@@ -2914,37 +2846,22 @@ if (reversed == null) { reversed = false; }
 			else{
 				pauseMsg.visible = false;
 			}
-			
-			//זמן נחיתה 
 		
 			// show instructions
 			instructions.visible = true;
 			// show text on signs
-			// categorysign.forEach( (sign) => { sign.visible = true; } );
 			signs.forEach( (sign) => { sign.getChildByName('signText').visible = true; } );
-			// show plane
+			// show plane and new question
 			startNewQuestion();
-		
 		}
 		
-		function mouseOverSpeedLevel(event){
-			if ( event.currentTarget.alpha == 0.1 ) {
-				event.currentTarget.alpha = 0.5;
-			}
-		}
-		
-		function mouseOutSpeedLevel(event){
-			if ( event.currentTarget.alpha == 0.5 ) {
-				event.currentTarget.alpha = 0.1;
-			}
-		}
-		
-		// loads image on plane
-		function storeImgToPlane(event) {
+		// stores image as a bitmap, prepared to load on plane
+		function storeImgToplane(event) {
+			// create bitmap from image triggered this function
 			var bitmap = new createjs.Bitmap(event.currentTarget);
 			bitmap.name = 'img';
 			
-			// adapt size and position
+			// -- adapt size and position
 			const IMG_X = 289;
 			const IMG_Y = 15;
 			const IMG_W = 127;
@@ -2966,11 +2883,40 @@ if (reversed == null) { reversed = false; }
 				bitmap.x += ( (IMG_W - (bitmap.getBounds().width*picHeight) ) /2);
 			}
 		
+			// stroe to bimaps array
 			bitmaps.push({question: event.currentTarget.alt, bitmap: bitmap});
-			console.log(bitmap);
 		}
 		
-		// mute all sounds
+		// add image question bitmap to score
+		function addBitmapToScore(bitmap, x, y, w, h) {
+			// -- adapt size and position
+			const IMG_X = x + 1 ;
+			const IMG_Y = y + 1 ;
+			const IMG_W = w - 2 ;
+			const IMG_H = h - 2 ;
+			// postion image
+			bitmap.x = IMG_X;
+			bitmap.y = IMG_Y;
+			// scale image depends on its width and height ratio
+			if (bitmap.getBounds().width > ((IMG_W/IMG_H)*bitmap.getBounds().height)) {
+				var picWidth = IMG_W / bitmap.getBounds().width;
+				bitmap.scale = picWidth;
+				// update position
+				bitmap.y += ( (IMG_H - (bitmap.getBounds().height*picWidth) ) /2); 
+			} 
+			else {		
+				var picHeight = IMG_H / bitmap.getBounds().height;
+				bitmap.scale = picHeight;
+				// update position
+				bitmap.x += ( (IMG_W - (bitmap.getBounds().width*picHeight) ) /2);
+			}
+		
+			// add bitmap to score window & store it in elements (to be removed further)
+			scoreWindow.addChild(bitmap);
+			scoreWinEl.push(bitmap);
+		}
+		
+		// mutes all sounds
 		function muteAllSounds(event) {
 			if (event.currentTarget.currentFrame == 0) {
 				event.currentTarget.gotoAndStop(1);
@@ -2993,31 +2939,91 @@ if (reversed == null) { reversed = false; }
 		
 		}
 		
-		// loads image on plane
-		function addBitmapToScore(bitmap, x, y, w, h) {
-			// adapt size and position
-			const IMG_X = x + 1 ;
-			const IMG_Y = y + 1 ;
-			const IMG_W = w - 2 ;
-			const IMG_H = h - 2 ;
-			// postion image
-			bitmap.x = IMG_X;
-			bitmap.y = IMG_Y;
-			// scale image depends on its width and height ratio
-			if (bitmap.getBounds().width > ((IMG_W/IMG_H)*bitmap.getBounds().height)) {
-				var picWidth = IMG_W / bitmap.getBounds().width;
-				bitmap.scale = picWidth;
-				// update position
-				bitmap.y += ( (IMG_H - (bitmap.getBounds().height*picWidth) ) /2); 
-			} 
-			else {		
-				var picHeight = IMG_H / bitmap.getBounds().height;
-				bitmap.scale = picHeight;
-				// update position
-				bitmap.x += ( (IMG_W - (bitmap.getBounds().width*picHeight) ) /2);
+		// mouse starts hover over speed level
+		function mouseOverSpeedLevel(event){
+			if ( event.currentTarget.alpha == 0.1 ) {	// level is not selected
+				event.currentTarget.alpha = 0.5;
 			}
-			scoreWindow.addChild(bitmap);
-			scoreWinEl.push(bitmap);
+		}
+		
+		// mouse stops hover over speed level
+		function mouseOutSpeedLevel(event){
+			if ( event.currentTarget.alpha == 0.5 ) {	// level is not selected
+				event.currentTarget.alpha = 0.1;
+			}
+		}
+		
+		// changes speed to clicked speed level
+		function changeSpeed(event){
+			// get clicked level name (num)
+			var num = parseInt(event.currentTarget.name.charAt(5));
+			// check if new speed isn't same as current speed 
+			if ( num != currentSpeed) {
+				// change old speed alpha
+				speedLevels[currentSpeed].alpha = 0.1;
+				currentSpeed = num;
+				// change new speed alpha
+				speedLevels[currentSpeed].alpha = 1;
+				// change speed if plane is not at fly out
+				if ( planeSpeed != PLANE_FLY_OUT_SPEED ){
+					planeSpeed = speeds[currentSpeed];
+				}
+			} 
+		}
+		
+		// instructions start button clicked
+		function instructionsStartBtn(event){
+			// hide button
+			event.currentTarget.visible = false;
+			// play background sound
+			if(instructions.soundBtn.currentFrame == 0) {
+				backgroundSound.play();
+				backgroundSound.volume = 0.05;
+			}
+			// clear black screen
+			blackScreen.visible = false;
+			// update signs text
+			for (var i=0; i<categoryArray.length; i++){
+				signs[i].getChildByName('signText').text = categoryArray[i].name;
+				// update position
+				signs[i].getChildByName('signText').y = 35 - signs[i].getChildByName('signText').getMeasuredHeight()/2;
+			}
+			// start new question
+			startNewQuestion();
+		}
+		
+		// mouse starts hover over game choice
+		function mouseOverGameChoice(event){
+			var currentGameBtn = parseInt(event.currentTarget.name.charAt(10));
+			if ( selectedGame != currentGameBtn ) {
+				event.currentTarget.gotoAndStop(1);
+			}
+		}
+		
+		// mouse stops hover over game choice
+		function mouseOutGameChoice(event){
+			var currentGameBtn = parseInt(event.currentTarget.name.charAt(10));
+			if ( selectedGame != currentGameBtn ) {
+				event.currentTarget.gotoAndStop(0);
+			}
+		}
+		
+		// selects a game (triggered by game choice button) 
+		function clickGameChoice(event){ 
+			var currentGameBtn = parseInt(event.currentTarget.name.charAt(10));
+			console.log(event.currentTarget.name);
+			console.log(event.currentTarget.name.charAt(10));
+			event.currentTarget.gotoAndStop(2);
+			if ( event.currentTarget.name == 'gameChoice1' ) {
+				login.getChildByName('gameChoice0').gotoAndStop(0);
+			}
+			else {
+				login.getChildByName('gameChoice1').gotoAndStop(0);
+			}
+			
+			login.startBtn.cursor = "pointer";
+			login.startBtn.gotoAndStop(0);
+			selectedGame = currentGameBtn;
 		}
 		
 		// ==============================
@@ -3043,23 +3049,23 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedBmp_531.png?1613139468736", id:"CachedBmp_531"},
-		{src:"images/game_atlas_1.png?1613139468660", id:"game_atlas_1"},
-		{src:"images/game_atlas_2.png?1613139468660", id:"game_atlas_2"},
-		{src:"images/game_atlas_3.png?1613139468660", id:"game_atlas_3"},
-		{src:"images/game_atlas_4.png?1613139468660", id:"game_atlas_4"},
-		{src:"images/game_atlas_5.png?1613139468660", id:"game_atlas_5"},
-		{src:"images/game_atlas_6.png?1613139468660", id:"game_atlas_6"},
-		{src:"images/game_atlas_7.png?1613139468660", id:"game_atlas_7"},
-		{src:"images/game_atlas_8.png?1613139468661", id:"game_atlas_8"},
-		{src:"images/game_atlas_9.png?1613139468661", id:"game_atlas_9"},
-		{src:"images/game_atlas_10.png?1613139468661", id:"game_atlas_10"},
-		{src:"images/game_atlas_11.png?1613139468662", id:"game_atlas_11"},
-		{src:"sounds/backgroundMusic.mp3?1613139468736", id:"backgroundMusic"},
-		{src:"sounds/gameOverSound.mp3?1613139468736", id:"gameOverSound"},
-		{src:"sounds/goodJobSound.mp3?1613139468736", id:"goodJobSound"},
-		{src:"sounds/ohNoSound.mp3?1613139468736", id:"ohNoSound"},
-		{src:"sounds/planeFlySound.mp3?1613139468736", id:"planeFlySound"}
+		{src:"images/CachedBmp_659.png?1613163918440", id:"CachedBmp_659"},
+		{src:"images/game_atlas_1.png?1613163918341", id:"game_atlas_1"},
+		{src:"images/game_atlas_2.png?1613163918341", id:"game_atlas_2"},
+		{src:"images/game_atlas_3.png?1613163918341", id:"game_atlas_3"},
+		{src:"images/game_atlas_4.png?1613163918341", id:"game_atlas_4"},
+		{src:"images/game_atlas_5.png?1613163918341", id:"game_atlas_5"},
+		{src:"images/game_atlas_6.png?1613163918341", id:"game_atlas_6"},
+		{src:"images/game_atlas_7.png?1613163918342", id:"game_atlas_7"},
+		{src:"images/game_atlas_8.png?1613163918342", id:"game_atlas_8"},
+		{src:"images/game_atlas_9.png?1613163918342", id:"game_atlas_9"},
+		{src:"images/game_atlas_10.png?1613163918342", id:"game_atlas_10"},
+		{src:"images/game_atlas_11.png?1613163918344", id:"game_atlas_11"},
+		{src:"sounds/backgroundMusic.mp3?1613163918440", id:"backgroundMusic"},
+		{src:"sounds/gameOverSound.mp3?1613163918440", id:"gameOverSound"},
+		{src:"sounds/goodJobSound.mp3?1613163918440", id:"goodJobSound"},
+		{src:"sounds/ohNoSound.mp3?1613163918440", id:"ohNoSound"},
+		{src:"sounds/planeFlySound.mp3?1613163918440", id:"planeFlySound"}
 	],
 	preloads: []
 };
