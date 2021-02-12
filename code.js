@@ -31,16 +31,16 @@ backgroundSound = createjs.Sound.play('backgroundMusic', {loop: -1});
 backgroundSound.stop();
 
 // create plane and define position
-var Plane = new lib.Plane();
-stage.addChild(Plane);
-Plane.x = 1280;
-Plane.y = 200;
+var plane = new lib.Plane();
+stage.addChild(plane);
+plane.x = 1280;
+plane.y = 200;
 
 //add plane text
 var planeText = new createjs.Text();
 planeText.font = "16px Abraham";
 planeText.color = "black";
-Plane.addChild(planeText);
+plane.addChild(planeText);
 planeText.x = 357;
 planeText.y = 30;
 planeText.lineWidth = 195;
@@ -54,11 +54,11 @@ airplaneApproach.y = 182;
 airplaneApproach.gotoAndStop(0);
 airplaneApproach.visible = false;
 
-// create Tower 
-var Tower = new lib.Tower();
-stage.addChild(Tower);
-Tower.x = 33;
-Tower.y = 28;
+// create tower 
+var tower = new lib.Tower();
+stage.addChild(tower);
+tower.x = 33;
+tower.y = 28;
 
 // create feeback bubble
 var inspectorFeedback = new lib.feedbackBubble();
@@ -360,15 +360,10 @@ var database = [
 ];
 
 // database builder
-var QuesItemArray = [];
-var CategoryArray = [];
-
-// image loader
-// var image = new Image();
-// image.onload = handleImageLoad;
-
-// image testing
+var quesItemArray = [];
+var categoryArray = [];
 var bitmaps = [];
+
 
 // ====================================
 // Define Functions
@@ -381,7 +376,7 @@ function playGame(){
 	scoreWindow.visible = false;
 
 	// reset tower index
-	stage.setChildIndex( Tower, 4);
+	stage.setChildIndex( tower, 4);
 	stage.setChildIndex( inspectorFeedback, 6);
 	inspectorFeedback.visible = false;
 
@@ -397,17 +392,17 @@ function playGame(){
 function initializeGame() {
 	if ( selectedGame !=  null) {	// user selected a game
 		// selected game database builder
-		CategoryArray = [];
+		categoryArray = [];
 		for (var i=0; i<database[selectedGame].categories.length; i++) {
-			CategoryArray.push({
+			categoryArray.push({
 				name: database[selectedGame].categories[i],
 				animation: "planeLand-"+i
 			});
 		}
-		QuesItemArray=[];
+		quesItemArray=[];
 		bitmaps = [];
 		for (var i=0; i<database[selectedGame].questions.length; i++){
-			QuesItemArray.push({
+			quesItemArray.push({
 				name: database[selectedGame].questions[i].content,
 				answer: database[selectedGame].questions[i].answer,
 				description: database[selectedGame].questions[i].description,
@@ -418,7 +413,7 @@ function initializeGame() {
 			});
 			if ( database[selectedGame].questions[i].type == 'img' ) { // image
 				var image = new Image();
-				image.onload = storeImgToPlane;
+				image.onload = storeImgToplane;
 				image.alt = i;
 				image.src = 'flags/'+database[selectedGame].questions[i].content;
 			}
@@ -436,7 +431,7 @@ function initializeGame() {
 		planeText.text = '';
 
 		// reset signs
-		for (var i=0; i<CategoryArray.length; i++){
+		for (var i=0; i<categoryArray.length; i++){
 			signs[i].getChildByName('signText').text = "";
 
 		}
@@ -453,7 +448,7 @@ function initializeGame() {
 		speedLevels[1].alpha = 0.1;
 		speedLevels[2].alpha = 0.1;
 		// reset tower index
-		stage.setChildIndex( Tower, 4);
+		stage.setChildIndex( tower, 4);
 		stage.setChildIndex( inspectorFeedback, 6);
 		inspectorFeedback.visible = false;
 		// clear score window
@@ -461,12 +456,12 @@ function initializeGame() {
 		scoreWinEl = [];
 
 		// update signs
-		for (var i=0; i<CategoryArray.length; i++){
+		for (var i=0; i<categoryArray.length; i++){
 			hangars[i].visible = true;
 			signs[i].visible = true;
 		}
-		unansweredQuestions = QuesItemArray.length;
-		instructions.progress.text = (QuesItemArray.length-unansweredQuestions)+'/'+QuesItemArray.length;
+		unansweredQuestions = quesItemArray.length;
+		instructions.progress.text = (quesItemArray.length-unansweredQuestions)+'/'+quesItemArray.length;
 	}
 }
 
@@ -478,8 +473,8 @@ function startNewQuestion() {
 		signs.forEach( (sign) => { sign.gotoAndStop(0); } );
 		
 		// update signs
-		for (var i=0; i<CategoryArray.length; i++){
-			signs[i].getChildByName('signText').text = CategoryArray[i].name;
+		for (var i=0; i<categoryArray.length; i++){
+			signs[i].getChildByName('signText').text = categoryArray[i].name;
 			signs[i].getChildByName('signText').y = 35 - signs[i].getChildByName('signText').getMeasuredHeight()/2;
 		}
 		// reset feedback
@@ -488,8 +483,8 @@ function startNewQuestion() {
 		lastQuestion = currentQues;
 		currentQues = randomQuestion(); // pick a random question
 		if (currentQues != null ) { 	// there is a non-answered question
-			if ( QuesItemArray[currentQues].type == 'text') {
-				planeText.text = QuesItemArray[currentQues].name;
+			if ( quesItemArray[currentQues].type == 'text') {
+				planeText.text = quesItemArray[currentQues].name;
 				if ( planeText.text.length < 20 ) {
 					planeText.font = "25px Alef";
 				} else if ( planeText.text.length < 36 ) {
@@ -502,12 +497,12 @@ function startNewQuestion() {
 			else {
 				planeText.text = '';
 				bitmapsIndex = bitmaps.findIndex( (bmp) => { return bmp.question == currentQues; });
-				Plane.addChild(bitmaps[bitmapsIndex].bitmap);
+				plane.addChild(bitmaps[bitmapsIndex].bitmap);
         	}
 
 			currentAns = null;
 			planeSpeed = speeds[currentSpeed]; // reset plane speed to user choice
-			startPlaneFly();
+			startplaneFly();
 			if(instructions.soundBtn.currentFrame == 0) {
 				flySound.play();
 			}
@@ -533,16 +528,16 @@ function startNewQuestion() {
 // checks the answer of the sign clicked
 function checkAnswer(event) {
 	if (currentAns == null && 				// if user didn't answer current question yet
-		PLANE_X_ANSWER_START > Plane.x &&	// and plane is at available range
-		PLANE_X_ANSWER_END < Plane.x		){	 
+		PLANE_X_ANSWER_START > plane.x &&	// and plane is at available range
+		PLANE_X_ANSWER_END < plane.x		){	 
 		currentAns = parseInt(event.currentTarget.name.charAt(4));
-		if (QuesItemArray[currentQues].answer == currentAns){	// correct answer
+		if (quesItemArray[currentQues].answer == currentAns){	// correct answer
 			// calculate question time
 			var currentAnsTime = new Date();
-			QuesItemArray[currentQues].time = (currentAnsTime.getTime() - currentQuesStartTime.getTime())/1000;
-			console.log('current ques time: '+QuesItemArray[currentQues].time);
+			quesItemArray[currentQues].time = (currentAnsTime.getTime() - currentQuesStartTime.getTime())/1000;
+			console.log('current ques time: '+quesItemArray[currentQues].time);
 
-			QuesItemArray[currentQues].status = true;
+			quesItemArray[currentQues].status = true;
 			unansweredQuestions--;
 			console.log ("Yessssssssssssss!!");
 
@@ -551,11 +546,11 @@ function checkAnswer(event) {
 			inspectorFeedback.visible = true;
 			var msg = ',כל הכבוד\n'
 					+ 'עזרת לי להנחית מטוס '
-					+ (QuesItemArray.length-unansweredQuestions)
+					+ (quesItemArray.length-unansweredQuestions)
 					+ ' מתוך '
-					+ QuesItemArray.length;
+					+ quesItemArray.length;
 			inspectorFeedback.feedbackText.text = msg;
-			instructions.progress.text = (QuesItemArray.length-unansweredQuestions)+'/'+QuesItemArray.length;
+			instructions.progress.text = (quesItemArray.length-unansweredQuestions)+'/'+quesItemArray.length;
 			if(instructions.soundBtn.currentFrame == 0) {
 				goodJobSound.play();
 			}
@@ -581,52 +576,52 @@ function checkAnswer(event) {
 		console.log('speedUp');
 
 		// add try count
-		QuesItemArray[currentQues].try++;
+		quesItemArray[currentQues].try++;
 		countMultiMiss = 0;
 	}
 }
 
 // start plane flying
-function startPlaneFly(){
-	Plane.x = 1280;
+function startplaneFly(){
+	plane.x = 1280;
 	planeInterval = setInterval( planeMoveOneStep ,1000/24);
 }
 
 // stop plane flying
-function stopPlaneFly(){
+function stopplaneFly(){
 	clearInterval(planeInterval);
 }
 
 // plane one step movment
 function planeMoveOneStep(){
-	Plane.x = Plane.x - planeSpeed;
+	plane.x = plane.x - planeSpeed;
 	// fadein sound
-	if ( Plane.x > PLANE_X_ANSWER_START ) {
+	if ( plane.x > PLANE_X_ANSWER_START ) {
 		var fadeInDistance = 1280 - PLANE_X_ANSWER_START;
-		var passedDistance = 1280 - Plane.x;
+		var passedDistance = 1280 - plane.x;
 		flySound.volume = 0.5*(passedDistance/fadeInDistance);
 	}
 	// set question start time
-	if ( Plane.x < PLANE_X_ANSWER_START && currentQuesStartTime == null ) { // plane passed the start point
+	if ( plane.x < PLANE_X_ANSWER_START && currentQuesStartTime == null ) { // plane passed the start point
 		currentQuesStartTime = new Date();
 	}
 	// fadeout sound
-	if ( Plane.x < PLANE_X_ANSWER_END ) {
+	if ( plane.x < PLANE_X_ANSWER_END ) {
 		var fadeOutDistance = PLANE_X_ANSWER_END - (-474) ;
-		var remainingDistance = Plane.x - (-474);
+		var remainingDistance = plane.x - (-474);
 		flySound.volume = 0.5*(remainingDistance/fadeOutDistance);
 	}
-	if ( Plane.x <= -474 ) { // plane arrived to the edge
+	if ( plane.x <= -474 ) { // plane arrived to the edge
 		flySound.stop();
-		stopPlaneFly();
+		stopplaneFly();
 		// remove img if exists
-		var img = Plane.getChildByName('img');
+		var img = plane.getChildByName('img');
 		if (img != null ) {
-			Plane.removeChild(img);
+			plane.removeChild(img);
 		}
 
 		if ( currentAns!= null ) {										// user answered current question
-			if ( QuesItemArray[currentQues].answer == currentAns){		// correct answer
+			if ( quesItemArray[currentQues].answer == currentAns){		// correct answer
 				// set landing direction
 				switch (currentAns){
 					case 0: 
@@ -659,7 +654,7 @@ function planeMoveOneStep(){
 		else {															// user didn't answer current question
 			countMultiMiss++;
 			console.log('countMultiMiss: '+countMultiMiss);
-			QuesItemArray[currentQues].try++;
+			quesItemArray[currentQues].try++;
 			startNewQuestion();
 		}
 	}
@@ -723,8 +718,8 @@ function changeSpeed(event){
 function randomQuestion(){
 	var remainingQuestions = [];
 	// collect remaining questions
-	for (var i=0; i<QuesItemArray.length; i++){
-		if ( !QuesItemArray[i].status ) {
+	for (var i=0; i<quesItemArray.length; i++){
+		if ( !quesItemArray[i].status ) {
 			remainingQuestions.push(i);
 		}
 	}
@@ -755,10 +750,10 @@ function showScore() {
 	var totalMisses = 0;
 	var finalScore = 0;
 	var quesCountPerCat = [];
-	CategoryArray.forEach( () => { quesCountPerCat.push(0); } );
+	categoryArray.forEach( () => { quesCountPerCat.push(0); } );
 
-	for (var i=0; i<QuesItemArray.length; i++){
-		var currentTime = QuesItemArray[i].time;
+	for (var i=0; i<quesItemArray.length; i++){
+		var currentTime = quesItemArray[i].time;
 		var tScore = 100;
 		if ( currentTime > minTime ) {
 			tScore -= (((currentTime-minTime)/(maxTime-minTime)) * (100-80));
@@ -766,11 +761,11 @@ function showScore() {
 
 		// total
 		totalTime += currentTime;
-		totalMisses += (QuesItemArray[i].try - 1);
-		finalScore += ((tScore / QuesItemArray[i].try)/QuesItemArray.length);
+		totalMisses += (quesItemArray[i].try - 1);
+		finalScore += ((tScore / quesItemArray[i].try)/quesItemArray.length);
 		
 		// update category counter
-		quesCountPerCat[QuesItemArray[i].answer]++;
+		quesCountPerCat[quesItemArray[i].answer]++;
 	}
 
 	// floor numbers
@@ -792,7 +787,7 @@ function showScore() {
 	signs.forEach( (sign) => { sign.visible = false; });
 
 	// show elements
-	stage.setChildIndex( Tower, stage.numChildren - 1);
+	stage.setChildIndex( tower, stage.numChildren - 1);
 	stage.setChildIndex( inspectorFeedback, stage.numChildren - 1);
 	inspectorFeedback.visible = true;
 	inspectorFeedback.feedbackText.text = 'הנחתת את כל המטוסים בהצלחה';
@@ -810,13 +805,13 @@ function showScore() {
 	var headerY = 114.25;
 	var tableX = 27.35;
 	var tableY = 162.2;
-	var colWidth = (530.25 / CategoryArray.length);
+	var colWidth = (530.25 / categoryArray.length);
 	var rowHeight = 327.9 / maxCatLength ;
 	var categoryCounter = [];
 	// create headers
-	for (var i=0; i<CategoryArray.length; i++){
+	for (var i=0; i<categoryArray.length; i++){
 		var catHeader = new createjs.Text();
-		catHeader.text = CategoryArray[i].name;
+		catHeader.text = categoryArray[i].name;
 		catHeader.font = "20pt Abraham";
 		catHeader.color = "white";
 		catHeader.x = tableX + (colWidth*i) + (colWidth/2);
@@ -829,14 +824,14 @@ function showScore() {
 	}
 
 	// create table
-	for (var i=0; i<QuesItemArray.length; i++){
-		if ( QuesItemArray[i].type == 'text' ) {
+	for (var i=0; i<quesItemArray.length; i++){
+		if ( quesItemArray[i].type == 'text' ) {
 			var tableEl = new createjs.Text();
-			tableEl.text = QuesItemArray[i].description;
+			tableEl.text = quesItemArray[i].description;
 			tableEl.font = "15pt Alef";
-			tableEl.color = (QuesItemArray[i].try > 1)?"red":"black";
-			tableEl.x = tableX + (colWidth*QuesItemArray[i].answer) + (colWidth/2);
-			tableEl.y = tableY + (rowHeight*categoryCounter[QuesItemArray[i].answer]) + rowHeight*0.5;
+			tableEl.color = (quesItemArray[i].try > 1)?"red":"black";
+			tableEl.x = tableX + (colWidth*quesItemArray[i].answer) + (colWidth/2);
+			tableEl.y = tableY + (rowHeight*categoryCounter[quesItemArray[i].answer]) + rowHeight*0.5;
 			tableEl.lineWidth = colWidth;
 			tableEl.textAlign = "center";
 			tableEl.y -= tableEl.getMeasuredHeight()/2;
@@ -845,11 +840,11 @@ function showScore() {
 		} 
 		else {
 			// image
-			var x = tableX + (colWidth*QuesItemArray[i].answer);
-			var y = tableY + (rowHeight*categoryCounter[QuesItemArray[i].answer]);
+			var x = tableX + (colWidth*quesItemArray[i].answer);
+			var y = tableY + (rowHeight*categoryCounter[quesItemArray[i].answer]);
 			bitmapsIndex = bitmaps.findIndex( (bmp) => { return bmp.question == i; });
 			addBitmapToScore(bitmaps[bitmapsIndex].bitmap, x, y, colWidth, rowHeight);
-			if (QuesItemArray[i].try > 1) {		// if there are more than 1 try
+			if (quesItemArray[i].try > 1) {		// if there are more than 1 try
 				var redRect = new lib.redRect();
 				redRect.x = x;
 				redRect.y = y;
@@ -861,7 +856,7 @@ function showScore() {
 				scoreWinEl.push(redRect);
 			}
 		}
-		categoryCounter[QuesItemArray[i].answer]++;
+		categoryCounter[quesItemArray[i].answer]++;
 	}
 }
 
@@ -875,8 +870,8 @@ function pauseGame() {
 
 	// -- hide plane
 	// plane is flying
-	stopPlaneFly();
-	Plane.x = 1280;
+	stopplaneFly();
+	plane.x = 1280;
 	// plane is on approach
 	airplaneApproach.removeEventListener('tick', lastApproachFrame);
 	airplaneApproach.gotoAndStop(0);
@@ -889,9 +884,9 @@ function pauseGame() {
 	landing.scale = 1;
 	landing.y = 236.75;
 	// remove img if exists
-	var img = Plane.getChildByName('img');
+	var img = plane.getChildByName('img');
 	if (img != null ) {
-		Plane.removeChild(img);
+		plane.removeChild(img);
 	}
 		
 	// hide text on signs
@@ -962,7 +957,7 @@ function mouseOutSpeedLevel(event){
 }
 
 // loads image on plane
-function storeImgToPlane(event) {
+function storeImgToplane(event) {
 	var bitmap = new createjs.Bitmap(event.currentTarget);
 	bitmap.name = 'img';
 	
